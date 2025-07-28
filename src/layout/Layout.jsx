@@ -1,7 +1,7 @@
-import React from 'react'
+
 import Navber from './Navber'
-import { Outlet } from 'react-router'
 import BottomPart from './BottomPart'
+import { Outlet } from 'react-router-dom'
 
 const Layout = () => {
   return (
