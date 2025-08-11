@@ -24,7 +24,7 @@ const Discuss = () => {
                 onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
               >
                 <div className="p-[12px] bg-[#F6EBFF] max-w-[48px] rounded group-hover:bg-[#A53DFF] transition-all duration-300">
-                  <IoLocationOutline className="text-[20px] text-[#A53DFF] group-hover:text-white"  />
+                  <IoLocationOutline className="text-[20px] text-[#A53DFF] group-hover:text-white" />
                 </div>
                 <div>
                   <h4 className="font-[Work Sans] font-normal text-[14px] text-[#424E60] leading-[20px] mb-[4px] ">
@@ -44,7 +44,7 @@ const Discuss = () => {
                 onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
               >
                 <div className="p-[12px] bg-[#F6EBFF] max-w-[48px] rounded group-hover:bg-[#A53DFF] transition-all duration-300">
-                  <IoLocationOutline className="text-[20px] text-[#A53DFF] group-hover:text-white"  />
+                  <IoLocationOutline className="text-[20px] text-[#A53DFF] group-hover:text-white" />
                 </div>
                 <div>
                   <h4 className="font-[Work Sans] font-normal text-[14px] text-[#424E60] leading-[20px] mb-[4px] ">
@@ -64,11 +64,11 @@ const Discuss = () => {
                 onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
               >
                 <div className="p-[12px] bg-[#F6EBFF] max-w-[48px] rounded group-hover:bg-[#A53DFF] transition-all duration-300">
-                  <IoLocationOutline className="text-[20px] text-[#A53DFF] group-hover:text-white"  />
+                  <IoLocationOutline className="text-[20px] text-[#A53DFF] group-hover:text-white" />
                 </div>
                 <div>
                   <h4 className="font-[Work Sans] font-normal text-[14px] text-[#424E60] leading-[20px] mb-[4px] ">
-                   Call Me Now:
+                    Call Me Now:
                   </h4>
                   <h3 className="font-[Work Sans] font-medium text-[16px] text-[#132238] leading-[24px] ">
                     01749286221
@@ -77,21 +77,21 @@ const Discuss = () => {
               </div>
             </div>
             <div className="flex items-center gap-[12px] mt-[24px]">
-                 <div className="p-[12px] bg-[#F6EBFF] max-w-[48px] rounded hover:bg-[#A53DFF] transition-all duration-300">
-                  <IoLocationOutline className="text-[20px] text-[#A53DFF] hover:text-white"  />
-                </div>
-                 <div className="p-[12px] bg-[#F6EBFF] max-w-[48px] rounded hover:bg-[#A53DFF] transition-all duration-300">
-                  <IoLocationOutline className="text-[20px] text-[#A53DFF] hover:text-white"  />
-                </div>
-                 <div className="p-[12px] bg-[#F6EBFF] max-w-[48px] rounded hover:bg-[#A53DFF] transition-all duration-300">
-                  <IoLocationOutline className="text-[20px] text-[#A53DFF] hover:text-white"  />
-                </div>
-                 <div className="p-[12px] bg-[#F6EBFF] max-w-[48px] rounded hover:bg-[#A53DFF] transition-all duration-300">
-                  <IoLocationOutline className="text-[20px] text-[#A53DFF] hover:text-white"  />
-                </div>
-                 <div className="p-[12px] bg-[#F6EBFF] max-w-[48px] rounded hover:bg-[#A53DFF] transition-all duration-300">
-                  <IoLocationOutline className="text-[20px] text-[#A53DFF] hover:text-white"  />
-                </div>
+              <div className="p-[12px] bg-[#F6EBFF] max-w-[48px] rounded hover:bg-[#A53DFF] transition-all duration-300">
+                <IoLocationOutline className="text-[20px] text-[#A53DFF] hover:text-white" />
+              </div>
+              <div className="p-[12px] bg-[#F6EBFF] max-w-[48px] rounded hover:bg-[#A53DFF] transition-all duration-300">
+                <IoLocationOutline className="text-[20px] text-[#A53DFF] hover:text-white" />
+              </div>
+              <div className="p-[12px] bg-[#F6EBFF] max-w-[48px] rounded hover:bg-[#A53DFF] transition-all duration-300">
+                <IoLocationOutline className="text-[20px] text-[#A53DFF] hover:text-white" />
+              </div>
+              <div className="p-[12px] bg-[#F6EBFF] max-w-[48px] rounded hover:bg-[#A53DFF] transition-all duration-300">
+                <IoLocationOutline className="text-[20px] text-[#A53DFF] hover:text-white" />
+              </div>
+              <div className="p-[12px] bg-[#F6EBFF] max-w-[48px] rounded hover:bg-[#A53DFF] transition-all duration-300">
+                <IoLocationOutline className="text-[20px] text-[#A53DFF] hover:text-white" />
+              </div>
             </div>
           </div>
           <div>
@@ -99,6 +99,40 @@ const Discuss = () => {
               There are many variations of passages of Lorem Ipsu available, but
               the majority have suffered alte.
             </p>
+            <form action="#" className="flex flex-col gap-[24px] ">
+              <div className="relative after:content-[''] after:absolute after:bottom-[-15px] after:left-0 after:bg-[#E6E8EB] after:w-full after:h-[2px]">
+                <input
+                  className="outline-none w-full"
+                  type="text"
+                  placeholder="Enter Your Name"
+                />
+              </div>
+              <div className="relative after:content-[''] after:absolute after:bottom-[-15px] after:left-0 after:bg-[#E6E8EB] after:w-full after:h-[2px]">
+                <input
+                  className="outline-none w-full"
+                  type="text"
+                  placeholder="Enter Your Email"
+                />
+              </div>
+              <div className="relative after:content-[''] after:absolute after:bottom-[-15px] after:left-0 after:bg-[#E6E8EB] after:w-full after:h-[2px]">
+                <input className="outline-none w-full" type="text" placeholder="Location" />
+              </div>
+
+              <div className="flex flex-row w-full gap-[24px]">
+                <div className="relative w-[50%] after:content-[''] after:absolute after:bottom-[-15px] after:left-0 after:bg-[#E6E8EB] after:w-full after:h-[2px]">
+                <input className="outline-none w-full" type="text" placeholder="Budget*" />
+              </div>
+                <div className="relative w-[50%] after:content-[''] after:absolute after:bottom-[-15px] after:left-0 after:bg-[#E6E8EB] after:w-full after:h-[2px]">
+                <input className="outline-none w-full" type="text" placeholder="Subject*" />
+              </div>
+              </div>
+               <div className="relative after:content-[''] after:absolute after:bottom-[-15px] after:left-0 after:bg-[#E6E8EB] after:w-full after:h-[2px]">
+                <input className="outline-none w-full" type="text" placeholder="Message*" />
+              </div>
+              <div className="flex justify-start">
+                <button className="py-[12px] px-[24px] bg-[#A53DFF] rounded-[4px] cursor-pointer">Submit</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
