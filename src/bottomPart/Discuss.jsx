@@ -4,7 +4,7 @@ import { IoLocationOutline } from "react-icons/io5";
 const Discuss = () => {
   return (
     <>
-      <div className="max-w-[1320px] h-auto bg-white p-[88px] mb-[100px] rounded-[15px] shadow-[0px_4px_20px_rgba(0,0,0,0.1)] mx-auto">
+      <div className=" relative z-20 max-w-[1320px] h-auto bg-white p-[88px] mb-[100px] rounded-[15px] shadow-[0px_4px_20px_rgba(0,0,0,0.1)] mx-auto ">
         <div className="flex justify-between items-center">
           <div>
             <h3 className="font-[Work Sans] font-semibold text-[38px] text-[#132238] leading-[50px] mb-[8px] ">
