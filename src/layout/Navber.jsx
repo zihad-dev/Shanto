@@ -4,7 +4,7 @@ import Container from "../component/Container";
 
 const Navber = () => {
   return (
-    <div className="fixed top-0 left-0 w-full bg-white z-50">
+    <div className="relative top-0 left-0 w-full bg-white z-50">
       <Container>
         <div className="flex justify-between py-[20px]">
           <div className="w-[20%] flex items-center justify-center ">
@@ -24,9 +24,12 @@ const Navber = () => {
               <li className="px-[24px] py-[12px]">
                 <Link to="/About">About</Link>
               </li>
-              <li className="px-[24px] py-[12px]">Process</li>
-              <li className="px-[24px] py-[12px]">Portfolio</li>
-              <li className="px-[24px] py-[12px]">Blog</li>
+              <li className="px-[24px] py-[12px]">
+                <Link to="/Portfolio">Portfolio</Link>
+              </li>
+              <li className="px-[24px] py-[12px]">
+                <Link to="/Blog">Blog</Link>
+              </li>
               <li className="px-[24px] py-[12px]">Services</li>
               <li>
                 <button className="px-[24px] py-[12px] bg-[#A53DFF] text-white rounded-md">
