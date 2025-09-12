@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Container from "../component/Container";
+import { FaAngleDown } from "react-icons/fa";
 
 const Navber = () => {
   const [firstDrop, setFirstDrop] = useState(false);
@@ -74,39 +75,52 @@ const Navber = () => {
               <li className="relative" ref={dropdownRef}>
                 <button
                   onClick={handleFirstDrop}
-                  className="px-[24px] py-[12px] cursor-pointer"
+                  className="cursor-pointer flex items-center gap-4  font-['Roboto',sans-serif] font-medium text-[16px] text-[#303030]" 
                 >
-                  Services
+                  SEO Services
+                  {
+                    firstDrop ? <FaAngleDown className="rotate-180 transition" /> : <FaAngleDown className="transition" />
+                  }
+                  
                 </button>
 
                 {firstDrop && (
-                  <div className="absolute top-[50px] left-0 w-[220px] bg-[#F3F7FB] shadow-xl p-[20px] rounded-md">
+                  <div className="absolute top-[50px] left-0 w-[200px] bg-[#F3F7FB] shadow-xl p-[20px] rounded-md">
                     <ul className="flex flex-col gap-2">
                       {/* One */}
                       <li className="relative" ref={chDropRef1}>
                         <button
                           onClick={handleChDrop1}
-                          className="hover:bg-white cursor-pointer px-3 py-2 rounded w-full text-left"
+                          className="hover:bg-white cursor-pointer px-3 py-2 rounded w-full text-left font-['Roboto',sans-serif] font-medium text-[14px] text-[#333]"
                         >
-                          One
+                          CMS SEO
                         </button>
                         {chDrop1 && (
                           <div className="absolute top-0 left-[200px] w-[200px] bg-[#F3F7FB] shadow-xl p-[20px] rounded-md">
                             <ul className="flex flex-col gap-2">
                               <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                Six
+                                WordPress SEO
                               </li>
                               <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                Seven
+                                WIx SEo
                               </li>
                               <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                Eight
+                                Squarespace SEO
                               </li>
                               <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                Nine
+                                Joomla SEO
                               </li>
                               <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                Ten
+                                Magneto SEO
+                              </li>
+                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
+                                Moon Fruit SEO
+                              </li>
+                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
+                                Weebly SEO
+                              </li>
+                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
+                                Webnode SEO
                               </li>
                             </ul>
                           </div>
@@ -117,9 +131,9 @@ const Navber = () => {
                       <li className="relative" ref={chDropRef2}>
                         <button
                           onClick={handleChDrop2}
-                          className="hover:bg-white cursor-pointer px-3 py-2 rounded w-full text-left"
+                          className="hover:bg-white cursor-pointer px-3 py-2 rounded w-full text-left font-['Roboto',sans-serif] font-medium text-[14px] text-[#333]"
                         >
-                          Two
+                          E-commerce SEO
                         </button>
                         {chDrop2 && (
                           <div className="absolute top-0 left-[200px] w-[200px] bg-[#F3F7FB] shadow-xl p-[20px] rounded-md">
@@ -145,9 +159,9 @@ const Navber = () => {
                       <li className="relative" ref={chDropRef3}>
                         <button
                           onClick={handleChDrop3}
-                          className="hover:bg-white cursor-pointer px-3 py-2 rounded w-full text-left"
+                          className="hover:bg-white cursor-pointer px-3 py-2 rounded w-full text-left font-['Roboto',sans-serif] font-medium text-[14px] text-[#333]"
                         >
-                          Three
+                          Other SEO Service
                         </button>
                         {chDrop3 && (
                           <div className="absolute top-0 left-[200px] w-[200px] bg-[#F3F7FB] shadow-xl p-[20px] rounded-md">
@@ -166,55 +180,6 @@ const Navber = () => {
                         )}
                       </li>
 
-                      {/* Four */}
-                      <li className="relative" ref={chDropRef4}>
-                        <button
-                          onClick={handleChDrop4}
-                          className="hover:bg-white cursor-pointer px-3 py-2 rounded w-full text-left"
-                        >
-                          Four
-                        </button>
-                        {chDrop4 && (
-                          <div className="absolute top-0 left-[200px] w-[200px] bg-[#F3F7FB] shadow-xl p-[20px] rounded-md">
-                            <ul className="flex flex-col gap-2">
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                Service A
-                              </li>
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                Service B
-                              </li>
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                Service C
-                              </li>
-                            </ul>
-                          </div>
-                        )}
-                      </li>
-
-                      {/* Five */}
-                      <li className="relative" ref={chDropRef5}>
-                        <button
-                          onClick={handleChDrop5}
-                          className="hover:bg-white cursor-pointer px-3 py-2 rounded w-full text-left"
-                        >
-                          Five
-                        </button>
-                        {chDrop5 && (
-                          <div className="absolute top-0 left-[200px] w-[200px] bg-[#F3F7FB] shadow-xl p-[20px] rounded-md">
-                            <ul className="flex flex-col gap-2">
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                Item X
-                              </li>
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                Item Y
-                              </li>
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                Item Z
-                              </li>
-                            </ul>
-                          </div>
-                        )}
-                      </li>
                     </ul>
                   </div>
                 )}
