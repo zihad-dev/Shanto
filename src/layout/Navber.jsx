@@ -75,13 +75,14 @@ const Navber = () => {
               <li className="relative" ref={dropdownRef}>
                 <button
                   onClick={handleFirstDrop}
-                  className="cursor-pointer flex items-center gap-4  font-['Roboto',sans-serif] font-medium text-[16px] text-[#303030]" 
+                  className="cursor-pointer flex items-center gap-4  font-['Roboto',sans-serif] font-medium text-[16px] text-[#303030]"
                 >
                   SEO Services
-                  {
-                    firstDrop ? <FaAngleDown className="rotate-180 transition linear" /> : <FaAngleDown className="transition" />
-                  }
-                  
+                  {firstDrop ? (
+                    <FaAngleDown className="rotate-180 transition linear" />
+                  ) : (
+                    <FaAngleDown className="transition" />
+                  )}
                 </button>
 
                 {firstDrop && (
@@ -91,7 +92,9 @@ const Navber = () => {
                       <li className="relative" ref={chDropRef1}>
                         <button
                           onClick={handleChDrop1}
-                          className="hover:bg-white cursor-pointer px-3 py-2 rounded w-full text-left font-['Roboto',sans-serif] font-medium text-[14px] text-[#333]"
+                          className={`hover:bg-white cursor-pointer px-3 py-2 rounded w-full text-left font-['Roboto',sans-serif] font-medium text-[14px] ${
+                            chDrop1 ? "font-bold text-[#3] text-[15px] " : "text-[#333]"
+                          }`}
                         >
                           CMS SEO
                         </button>
@@ -99,10 +102,12 @@ const Navber = () => {
                           <div className="absolute top-0 left-[200px] w-[200px] bg-[#F3F7FB] shadow-xl p-[20px] rounded-md">
                             <ul className="flex flex-col gap-2">
                               <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                WordPress SEO
+                               
+                               <Link to="/WordPress">WordPress SEO</Link>
                               </li>
                               <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                WIx SEo
+                                
+                                <Link to="/WIxSeo">WIx SEo</Link>
                               </li>
                               <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
                                 Squarespace SEO
@@ -139,10 +144,10 @@ const Navber = () => {
                           <div className="absolute top-0 left-[200px] w-[210px] bg-[#F3F7FB] shadow-xl p-[20px] rounded-md">
                             <ul className="flex flex-col gap-2">
                               <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                               Shopify SEO
+                                Shopify SEO
                               </li>
                               <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                               Etsy SEO
+                                Etsy SEO
                               </li>
                               <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
                                 Walmart SEO
@@ -198,13 +203,12 @@ const Navber = () => {
                             <ul className="flex flex-col gap-2">
                               <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
                                 AEO (Answer Engine Optimization)
-
                               </li>
                               <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
                                 GEO (Generative Engine Optimization)
                               </li>
                               <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                               SXO (Search Experience Optimization)
+                                SXO (Search Experience Optimization)
                               </li>
                               <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
                                 LLM (Large Language Models)
@@ -213,7 +217,6 @@ const Navber = () => {
                           </div>
                         )}
                       </li>
-
                     </ul>
                   </div>
                 )}
