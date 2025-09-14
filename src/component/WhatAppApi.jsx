@@ -1,15 +1,43 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const WhatsAppWidget = () => {
   const [open, setOpen] = useState(false);
-  const now = new Date();
-  const time = now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+  const [time, setTime] = useState(""); // dynamic time state
+  const openRef = useRef(null);
+
+  // বাইরে ক্লিক করলে বন্ধ হবে
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (openRef.current && !openRef.current.contains(event.target)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  // ওপেন হলে টাইম সেট করো
+  const handleToggle = () => {
+    setOpen((prev) => {
+      if (!prev) {
+        const now = new Date();
+        const formatted = now.toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+        setTime(formatted);
+      }
+      return !prev;
+    });
+  };
 
   return (
     <div>
       {/* Floating Button */}
       <div
-        onClick={() => setOpen(!open)}
+        onClick={handleToggle}
         style={{
           position: "fixed",
           bottom: "20px",
@@ -35,6 +63,7 @@ const WhatsAppWidget = () => {
       {/* Chat Box */}
       {open && (
         <div
+          ref={openRef}
           style={{
             position: "fixed",
             bottom: "90px",
@@ -47,6 +76,7 @@ const WhatsAppWidget = () => {
             zIndex: 1000,
           }}
         >
+          {/* Header */}
           <div
             style={{
               background: "#075E54",
@@ -58,7 +88,7 @@ const WhatsAppWidget = () => {
             }}
           >
             <img
-              src="https://i.ibb.co/Y2s9sTp/profile.jpg" // 👉 তোমার প্রোফাইল ছবি লিঙ্ক বসাও
+              src="https://i.ibb.co/Y2s9sTp/profile.jpg" 
               alt="profile"
               style={{
                 width: "40px",
@@ -74,7 +104,7 @@ const WhatsAppWidget = () => {
             </div>
           </div>
 
-          {/* ✅ Dynamic Time */}
+          {/* Body */}
           <div style={{ padding: "10px", fontSize: "14px", color: "#333" }}>
             <p>
               <strong>Jihadul</strong> <br />
@@ -83,6 +113,7 @@ const WhatsAppWidget = () => {
             <small>{time}</small>
           </div>
 
+          {/* Footer */}
           <a
             href="https://wa.me/8801749286221?text=Hi!%20I%20want%20to%20know%20about%20SEO%20services"
             target="_blank"
