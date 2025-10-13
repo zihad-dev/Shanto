@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Container from "../../component/Container";
+import Rank from "../../component/Rank";
+import ContentVideo from "../../component/ContentVideo";
 
 const WorldPress = () => {
   const [formData, setFormData] = useState({
@@ -17,92 +19,58 @@ const WorldPress = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // আপনার WhatsApp নাম্বার বসান এখানে (country code সহ, + বাদ দিয়ে)
-    const phoneNumber = "8801749286221"; 
-
-    // মেসেজ বানানো
+    const phoneNumber = "8801749286221"; // তোমার WhatsApp নাম্বার
     const message = `Name: ${formData.name}%0AEmail: ${formData.email}%0ANumber: ${formData.number}`;
-
-    // WhatsApp API link
     const url = `https://wa.me/${phoneNumber}?text=${message}`;
 
-    // Redirect
     window.open(url, "_blank");
   };
 
   return (
     <div className="mt-[100px]">
       <Container>
-        <div className="flex gap-1 items-start justify-center">
-          <div className="w-[38%]">
-            <div className="w-[400px] h-[400px] bg-red-900 rounded-[5px]"></div>
-          </div>
-          <div className="w-[60%] flex flex-col items-center"> 
-            <div className="flex flex-col gap-2">
-              <h1 className="font-[Work Sans] font-semibold text-[34px] text-[#303030] leading-[40px] max-w-[600px]">
-              Rank Your WordPress Website On Google, Get Tips From Top Rated
-              WordPress SEO Expert
-            </h1>
-            <div>
-              <form
-                onSubmit={handleSubmit}
-                className="mt-5 flex flex-col gap-4"
-              >
-                <div className="flex flex-col gap-1 w-[250px] ">
-                  <span className="font-[Work Sans] font-semibold text-[16px] text-[#303030]">
-                    Name
-                  </span>
-                  <input
-                    className="font-[Work Sans] p-3 font-normal text-[#303030] border rounded-[8px]"
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Enter Your Name"
-                    required
-                  />
-                </div>
-                <div className="flex flex-col gap-1 w-[250px] ">
-                  <span className="font-[Work Sans] font-semibold text-[16px] text-[#303030]">
-                    Email
-                  </span>
-                  <input
-                    className="font-[Work Sans] p-3 font-normal text-[#303030] border rounded-[8px]"
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Enter Your Email"
-                    required
-                  />
-                </div>
-                <div className="flex flex-col gap-1 w-[250px] ">
-                  <span className="font-[Work Sans] font-semibold text-[16px] text-[#303030]">
-                    Number
-                  </span>
-                  <input
-                    className="font-[Work Sans] p-3 font-normal text-[#303030] border rounded-[8px]"
-                    type="text"
-                    name="number"
-                    value={formData.number}
-                    onChange={handleChange}
-                    placeholder="Enter Your Number"
-                    required
-                  />
-                </div>
-                <div className="flex flex-start">
-                  <button
-                    type="submit"
-                    className="p-3 bg-gray-600 rounded-[8px] text-white font-[Work Sans] font-semibold text-[16px] cursor-pointer hover:bg-gray-800 transition-all duration-300"
-                  >
-                    Find Out How
-                  </button>
-                </div>
-              </form>
-            </div>
-            </div>
-          </div>
-        </div>
+        <Rank />
+        <ContentVideo />
+
+        {/* ✅ Form যোগ করা হয়েছে */}
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-4 w-[400px] mt-10"
+        >
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            value={formData.name}
+            onChange={handleChange}
+            className="border p-2 rounded"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            value={formData.email}
+            onChange={handleChange}
+            className="border p-2 rounded"
+            required
+          />
+          <input
+            type="text"
+            name="number"
+            placeholder="Your Phone Number"
+            value={formData.number}
+            onChange={handleChange}
+            className="border p-2 rounded"
+            required
+          />
+          <button
+            type="submit"
+            className="bg-green-600 text-white py-2 rounded hover:bg-green-700"
+          >
+            Send to WhatsApp
+          </button>
+        </form>
       </Container>
     </div>
   );
