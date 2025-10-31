@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 
 const WhatsAppWidget = () => {
   const [open, setOpen] = useState(false);
-  const [time, setTime] = useState(""); // dynamic time state
+  const [time, setTime] = useState(""); // dynamic time
   const openRef = useRef(null);
 
-  // বাইরে ক্লিক করলে বন্ধ হবে
+  // Click outside to close
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (openRef.current && !openRef.current.contains(event.target)) {
@@ -18,7 +18,6 @@ const WhatsAppWidget = () => {
     };
   }, []);
 
-  // ওপেন হলে টাইম সেট করো
   const handleToggle = () => {
     setOpen((prev) => {
       if (!prev) {
@@ -38,25 +37,12 @@ const WhatsAppWidget = () => {
       {/* Floating Button */}
       <div
         onClick={handleToggle}
-        style={{
-          position: "fixed",
-          bottom: "20px",
-          right: "20px",
-          background: "#25D366",
-          borderRadius: "50%",
-          width: "60px",
-          height: "60px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          cursor: "pointer",
-          zIndex: 1000,
-        }}
+        className="fixed bottom-5 right-5 bg-[#25D366] w-14 h-14 flex items-center justify-center rounded-full shadow-lg cursor-pointer z-50 sm:w-16 sm:h-16"
       >
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
           alt="WhatsApp"
-          style={{ width: "35px", height: "35px" }}
+          className="w-8 h-8 sm:w-9 sm:h-9"
         />
       </div>
 
@@ -64,53 +50,28 @@ const WhatsAppWidget = () => {
       {open && (
         <div
           ref={openRef}
-          style={{
-            position: "fixed",
-            bottom: "90px",
-            right: "20px",
-            width: "300px",
-            background: "white",
-            borderRadius: "10px",
-            boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
-            overflow: "hidden",
-            zIndex: 1000,
-          }}
+          className="fixed bottom-20 right-5 w-72 sm:w-80 bg-white rounded-xl shadow-xl z-50 overflow-hidden flex flex-col"
         >
           {/* Header */}
-          <div
-            style={{
-              background: "#075E54",
-              color: "white",
-              padding: "10px",
-              display: "flex",
-              alignItems: "center",
-              gap: "10px",
-            }}
-          >
+          <div className="bg-[#075E54] text-white p-3 flex items-center gap-3">
             <img
-              src="https://i.ibb.co/Y2s9sTp/profile.jpg" 
+              src="https://i.ibb.co/Y2s9sTp/profile.jpg"
               alt="profile"
-              style={{
-                width: "40px",
-                height: "40px",
-                borderRadius: "50%",
-              }}
+              className="w-10 h-10 rounded-full"
             />
-            <div>
+            <div className="flex flex-col text-sm sm:text-base">
               <strong>Jihadul Islam</strong>
-              <p style={{ margin: 0, fontSize: "12px" }}>
-                SEO Expert & Consultant
-              </p>
+              <span className="text-xs sm:text-sm">SEO Expert & Consultant</span>
             </div>
           </div>
 
           {/* Body */}
-          <div style={{ padding: "10px", fontSize: "14px", color: "#333" }}>
+          <div className="p-3 text-sm text-gray-800 flex flex-col gap-1">
             <p>
               <strong>Jihadul</strong> <br />
               Contact Jihadul Islam Today!
             </p>
-            <small>{time}</small>
+            <small className="text-gray-500">{time}</small>
           </div>
 
           {/* Footer */}
@@ -118,15 +79,7 @@ const WhatsAppWidget = () => {
             href="https://wa.me/8801749286221?text=Hi!%20I%20want%20to%20know%20about%20SEO%20services"
             target="_blank"
             rel="noopener noreferrer"
-            style={{
-              display: "block",
-              textAlign: "center",
-              background: "#25D366",
-              color: "white",
-              padding: "12px",
-              textDecoration: "none",
-              fontWeight: "bold",
-            }}
+            className="bg-[#25D366] text-white text-center font-bold py-3 hover:bg-green-600 transition-colors"
           >
             💬 Click to start chat
           </a>

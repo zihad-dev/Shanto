@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Container from "../component/Container";
-import { FaAngleDown } from "react-icons/fa";
+import { FaAngleDown, FaBars, FaTimes } from "react-icons/fa";
 
 const Navber = () => {
   const [firstDrop, setFirstDrop] = useState(false);
@@ -9,22 +9,15 @@ const Navber = () => {
   const [chDrop2, setChDrop2] = useState(false);
   const [chDrop3, setChDrop3] = useState(false);
   const [chDrop4, setChDrop4] = useState(false);
-  const [chDrop5, setChDrop5] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
+
   const dropdownRef = useRef(null);
   const chDropRef1 = useRef(null);
   const chDropRef2 = useRef(null);
   const chDropRef3 = useRef(null);
   const chDropRef4 = useRef(null);
-  const chDropRef5 = useRef(null);
 
-  const handleFirstDrop = () => setFirstDrop(!firstDrop);
-  const handleChDrop1 = () => setChDrop1(!chDrop1);
-  const handleChDrop2 = () => setChDrop2(!chDrop2);
-  const handleChDrop3 = () => setChDrop3(!chDrop3);
-  const handleChDrop4 = () => setChDrop4(!chDrop4);
-  const handleChDrop5 = () => setChDrop5(!chDrop5);
-
-  // close dropdown when clicking outside
+  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -42,208 +35,255 @@ const Navber = () => {
       if (chDropRef4.current && !chDropRef4.current.contains(event.target)) {
         setChDrop4(false);
       }
-      if (chDropRef5.current && !chDropRef5.current.contains(event.target)) {
-        setChDrop5(false);
-      }
     };
-
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
-    <div className="relative top-0 left-0 w-full bg-white z-50 shadow-sm">
+    <div className="fixed top-0 left-0 w-full bg-white z-50 shadow-sm">
       <Container>
-        <div className="flex justify-between py-[20px]">
+        <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="w-[20%] flex items-center justify-center">
+          <div className="w-[20%] flex items-center">
             <Link to="/">
-              <img
-                src="images/Logo.png"
-                alt="Logo"
-                className="cursor-pointer"
-              />
+              <img src="images/Logo.png" alt="Logo" className="h-10" />
             </Link>
           </div>
 
-          {/* Menu */}
-          <div className="w-[80%] flex justify-end">
-            <ul className="flex items-center gap-[24px] relative">
-              {/* Services Dropdown */}
-              <li className="relative" ref={dropdownRef}>
-                <button
-                  onClick={handleFirstDrop}
-                  className="cursor-pointer flex items-center gap-4  font-['Roboto',sans-serif] font-medium text-[16px] text-[#303030]"
-                >
-                  SEO Services
-                  {firstDrop ? (
-                    <FaAngleDown className="rotate-180 transition linear" />
-                  ) : (
-                    <FaAngleDown className="transition" />
-                  )}
-                </button>
+          {/* Desktop Menu */}
+          <ul className="hidden md:flex items-center gap-6 relative">
+            {/* Services Dropdown */}
+            <li className="relative" ref={dropdownRef}>
+              <button
+                onClick={() => setFirstDrop(!firstDrop)}
+                className="flex items-center gap-2 font-medium text-[#303030]"
+              >
+                SEO Services
+                <FaAngleDown
+                  className={`transition-transform ${
+                    firstDrop ? "rotate-180" : "rotate-0"
+                  }`}
+                />
+              </button>
 
-                {firstDrop && (
-                  <div className="absolute top-[50px] left-0 w-[250px] bg-[#F3F7FB] shadow-xl p-[20px] rounded-md">
-                    <ul className="flex flex-col gap-2">
-                      {/* One */}
-                      <li className="relative" ref={chDropRef1}>
-                        <button
-                          onClick={handleChDrop1}
-                          className={`hover:bg-white cursor-pointer px-3 py-2 rounded w-full text-left font-['Roboto',sans-serif] font-medium text-[14px] ${
-                            chDrop1 ? "font-bold text-[#3] text-[15px] " : "text-[#333]"
-                          }`}
-                        >
-                          CMS SEO
-                        </button>
-                        {chDrop1 && (
-                          <div className="absolute top-0 left-[200px] w-[200px] bg-[#F3F7FB] shadow-xl p-[20px] rounded-md">
-                            <ul className="flex flex-col gap-2">
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                               
-                               <Link to="/WordPress">WordPress SEO</Link>
-                              </li>
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                
-                                <Link to="/WIxSeo">WIx SEo</Link>
-                              </li>
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                Squarespace SEO
-                              </li>
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                Joomla SEO
-                              </li>
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                Magneto SEO
-                              </li>
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                Moon Fruit SEO
-                              </li>
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                Weebly SEO
-                              </li>
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                Webnode SEO
-                              </li>
-                            </ul>
-                          </div>
-                        )}
-                      </li>
+              {firstDrop && (
+                <div className="absolute top-10 left-0 w-64 bg-[#F3F7FB] shadow-xl p-4 rounded-md z-50">
+                  {/* Dropdown Items */}
+                  <ul className="flex flex-col gap-2">
+                    {/* CMS SEO */}
+                    <li className="relative" ref={chDropRef1}>
+                      <button
+                        onClick={() => setChDrop1(!chDrop1)}
+                        className="w-full text-left px-2 py-1 hover:bg-white rounded"
+                      >
+                        CMS SEO
+                      </button>
+                      {chDrop1 && (
+                        <div className="absolute top-0 left-56 w-48 bg-[#F3F7FB] shadow-md p-2 rounded">
+                          <ul className="flex flex-col gap-1">
+                            <li>
+                              <Link to="/WordPress">WordPress SEO</Link>
+                            </li>
+                            <li>
+                              <Link to="/WIxSeo">Wix SEO</Link>
+                            </li>
+                            <li>Squarespace SEO</li>
+                            <li>Joomla SEO</li>
+                          </ul>
+                        </div>
+                      )}
+                    </li>
 
-                      {/* Two */}
-                      <li className="relative" ref={chDropRef2}>
-                        <button
-                          onClick={handleChDrop2}
-                          className="hover:bg-white cursor-pointer px-3 py-2 rounded w-full text-left font-['Roboto',sans-serif] font-medium text-[14px] text-[#333]"
-                        >
-                          E-commerce SEO
-                        </button>
-                        {chDrop2 && (
-                          <div className="absolute top-0 left-[200px] w-[210px] bg-[#F3F7FB] shadow-xl p-[20px] rounded-md">
-                            <ul className="flex flex-col gap-2">
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                Shopify SEO
-                              </li>
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                Etsy SEO
-                              </li>
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                Walmart SEO
-                              </li>
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                Big E-commerce SEO
-                              </li>
-                            </ul>
-                          </div>
-                        )}
-                      </li>
+                    {/* E-commerce SEO */}
+                    <li className="relative" ref={chDropRef2}>
+                      <button
+                        onClick={() => setChDrop2(!chDrop2)}
+                        className="w-full text-left px-2 py-1 hover:bg-white rounded"
+                      >
+                        E-commerce SEO
+                      </button>
+                      {chDrop2 && (
+                        <div className="absolute top-0 left-56 w-48 bg-[#F3F7FB] shadow-md p-2 rounded">
+                          <ul className="flex flex-col gap-1">
+                            <li>Shopify SEO</li>
+                            <li>Etsy SEO</li>
+                            <li>Walmart SEO</li>
+                          </ul>
+                        </div>
+                      )}
+                    </li>
 
-                      {/* Three */}
-                      <li className="relative" ref={chDropRef3}>
-                        <button
-                          onClick={handleChDrop3}
-                          className="hover:bg-white cursor-pointer px-3 py-2 rounded w-full text-left font-['Roboto',sans-serif] font-medium text-[14px] text-[#333]"
-                        >
-                          Other SEO Service
-                        </button>
-                        {chDrop3 && (
-                          <div className="absolute top-0 left-[200px] w-[200px] bg-[#F3F7FB] shadow-xl p-[20px] rounded-md">
-                            <ul className="flex flex-col gap-2">
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                Local SEO
-                              </li>
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                Link Building
-                              </li>
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                On Page SEO
-                              </li>
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                international SEO
-                              </li>
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                Technical SEO
-                              </li>
-                            </ul>
-                          </div>
-                        )}
-                      </li>
-                      {/* four */}
-                      <li className="relative" ref={chDropRef4}>
-                        <button
-                          onClick={handleChDrop4}
-                          className="hover:bg-white cursor-pointer px-3 py-2 rounded w-full text-left font-['Roboto',sans-serif] font-medium text-[14px] text-[#333]"
-                        >
-                          Generative Search Engine
-                        </button>
-                        {chDrop4 && (
-                          <div className="absolute top-[-50px] right-[230px] w-[250px] bg-[#F3F7FB] shadow-xl p-[20px] rounded-md">
-                            <ul className="flex flex-col gap-2">
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                AEO (Answer Engine Optimization)
-                              </li>
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                GEO (Generative Engine Optimization)
-                              </li>
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                SXO (Search Experience Optimization)
-                              </li>
-                              <li className="hover:bg-white cursor-pointer px-2 py-1 rounded">
-                                LLM (Large Language Models)
-                              </li>
-                            </ul>
-                          </div>
-                        )}
-                      </li>
-                    </ul>
-                  </div>
-                )}
-              </li>
+                    {/* Other SEO */}
+                    <li className="relative" ref={chDropRef3}>
+                      <button
+                        onClick={() => setChDrop3(!chDrop3)}
+                        className="w-full text-left px-2 py-1 hover:bg-white rounded"
+                      >
+                        Other SEO Service
+                      </button>
+                      {chDrop3 && (
+                        <div className="absolute top-0 left-56 w-48 bg-[#F3F7FB] shadow-md p-2 rounded">
+                          <ul className="flex flex-col gap-1">
+                            <li>Local SEO</li>
+                            <li>Link Building</li>
+                            <li>On Page SEO</li>
+                          </ul>
+                        </div>
+                      )}
+                    </li>
 
-              {/* Other Pages */}
-              <li className="px-[24px] py-[12px]">
-                <Link to="/">Home</Link>
-              </li>
-              <li className="px-[24px] py-[12px]">
-                <Link to="/About">About</Link>
-              </li>
-              <li className="px-[24px] py-[12px]">
-                <Link to="/Portfolio">Portfolio</Link>
-              </li>
-              <li className="px-[24px] py-[12px]">
-                <Link to="/Blog">Blog</Link>
-              </li>
-              <li>
-                <button className="px-[24px] py-[12px] bg-[#A53DFF] text-white rounded-md hover:bg-[#922ae6] transition">
-                  Contact
-                </button>
-              </li>
-            </ul>
+                    {/* Generative SEO */}
+                    <li className="relative" ref={chDropRef4}>
+                      <button
+                        onClick={() => setChDrop4(!chDrop4)}
+                        className="w-full text-left px-2 py-1 hover:bg-white rounded"
+                      >
+                        Generative SEO
+                      </button>
+                      {chDrop4 && (
+                        <div className="absolute top-0 left-56 w-48 bg-[#F3F7FB] shadow-md p-2 rounded">
+                          <ul className="flex flex-col gap-1">
+                            <li>AEO</li>
+                            <li>GEO</li>
+                            <li>SXO</li>
+                          </ul>
+                        </div>
+                      )}
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </li>
+
+            {/* Other Pages */}
+            <li>
+              <Link to="/" className="hover:text-purple-600">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/About" className="hover:text-purple-600">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/Portfolio" className="hover:text-purple-600">
+                Portfolio
+              </Link>
+            </li>
+            <li>
+              <Link to="/Blog" className="hover:text-purple-600">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <button className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">
+                Contact
+              </button>
+            </li>
+          </ul>
+
+          {/* Mobile Menu Toggle */}
+          <div className="md:hidden">
+            <button onClick={() => setMobileMenu(!mobileMenu)}>
+              {mobileMenu ? <FaTimes size={24} /> : <FaBars size={24} />}
+            </button>
           </div>
         </div>
       </Container>
+
+      {/* Mobile Menu */}
+      {mobileMenu && (
+        <div className="md:hidden bg-white shadow-lg w-full">
+          <ul className="flex flex-col gap-2 p-4">
+            <li>
+              <button
+                onClick={() => setFirstDrop(!firstDrop)}
+                className="w-full flex justify-between items-center px-2 py-2 font-medium text-[#303030]"
+              >
+                SEO Services <FaAngleDown className={`${firstDrop ? "rotate-180" : ""} transition`} />
+              </button>
+
+              {firstDrop && (
+                <ul className="flex flex-col pl-4 mt-2 gap-1">
+                  <li>
+                    <button
+                      onClick={() => setChDrop1(!chDrop1)}
+                      className="w-full text-left px-2 py-1 hover:bg-gray-100 rounded"
+                    >
+                      CMS SEO
+                    </button>
+                    {chDrop1 && (
+                      <ul className="flex flex-col pl-4 mt-1 gap-1">
+                        <li><Link to="/WordPress">WordPress SEO</Link></li>
+                        <li><Link to="/WIxSeo">Wix SEO</Link></li>
+                        <li>Squarespace SEO</li>
+                        <li>Joomla SEO</li>
+                      </ul>
+                    )}
+                  </li>
+                  <li>
+                    <button
+                      onClick={() => setChDrop2(!chDrop2)}
+                      className="w-full text-left px-2 py-1 hover:bg-gray-100 rounded"
+                    >
+                      E-commerce SEO
+                    </button>
+                    {chDrop2 && (
+                      <ul className="flex flex-col pl-4 mt-1 gap-1">
+                        <li>Shopify SEO</li>
+                        <li>Etsy SEO</li>
+                        <li>Walmart SEO</li>
+                      </ul>
+                    )}
+                  </li>
+                  <li>
+                    <button
+                      onClick={() => setChDrop3(!chDrop3)}
+                      className="w-full text-left px-2 py-1 hover:bg-gray-100 rounded"
+                    >
+                      Other SEO Service
+                    </button>
+                    {chDrop3 && (
+                      <ul className="flex flex-col pl-4 mt-1 gap-1">
+                        <li>Local SEO</li>
+                        <li>Link Building</li>
+                        <li>On Page SEO</li>
+                      </ul>
+                    )}
+                  </li>
+                  <li>
+                    <button
+                      onClick={() => setChDrop4(!chDrop4)}
+                      className="w-full text-left px-2 py-1 hover:bg-gray-100 rounded"
+                    >
+                      Generative SEO
+                    </button>
+                    {chDrop4 && (
+                      <ul className="flex flex-col pl-4 mt-1 gap-1">
+                        <li>AEO</li>
+                        <li>GEO</li>
+                        <li>SXO</li>
+                      </ul>
+                    )}
+                  </li>
+                </ul>
+              )}
+            </li>
+
+            <li><Link to="/" className="px-2 py-2 block">Home</Link></li>
+            <li><Link to="/About" className="px-2 py-2 block">About</Link></li>
+            <li><Link to="/Portfolio" className="px-2 py-2 block">Portfolio</Link></li>
+            <li><Link to="/Blog" className="px-2 py-2 block">Blog</Link></li>
+            <li>
+              <button className="bg-purple-600 text-white px-4 py-2 rounded w-full mt-2">
+                Contact
+              </button>
+            </li>
+          </ul>
+        </div>
+      )}
     </div>
   );
 };

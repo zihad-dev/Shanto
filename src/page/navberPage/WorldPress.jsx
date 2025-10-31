@@ -5,6 +5,8 @@ import ContentVideo from "../../component/ContentVideo";
 import ContentLogo from "../../component/ContentLogo";
 import Better from "./Better";
 import Client from "./Client";
+import Faq from "./Faq";
+import OptimizeWordPress from "./OptimizeWordPress";
 
 const WorldPress = () => {
 
@@ -16,7 +18,9 @@ const WorldPress = () => {
         <ContentLogo />
         <ContentVideo />
         <Better/>
+        <OptimizeWordPress/>
         <Client/>
+        <Faq/>
       </Container>
     </div>
   );
