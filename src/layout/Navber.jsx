@@ -341,7 +341,6 @@ const Navber = () => {
   const chDropRef3 = useRef(null);
   const chDropRef4 = useRef(null);
 
-  // handle dropdown toggle
   const handleDropToggle = (dropSetter, isOpen) => {
     setChDrop1(false);
     setChDrop2(false);
@@ -351,7 +350,6 @@ const Navber = () => {
   };
 
   const handleLinkClick = () => {
-    // dropdown বন্ধ করে দেবে link এ ক্লিক করলে
     setChDrop1(false);
     setChDrop2(false);
     setChDrop3(false);
@@ -360,24 +358,13 @@ const Navber = () => {
     setMobileMenu(false);
   };
 
-  // click outside করলে dropdown বন্ধ হবে
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setFirstDrop(false);
-      }
-      if (chDropRef1.current && !chDropRef1.current.contains(event.target)) {
-        setChDrop1(false);
-      }
-      if (chDropRef2.current && !chDropRef2.current.contains(event.target)) {
-        setChDrop2(false);
-      }
-      if (chDropRef3.current && !chDropRef3.current.contains(event.target)) {
-        setChDrop3(false);
-      }
-      if (chDropRef4.current && !chDropRef4.current.contains(event.target)) {
-        setChDrop4(false);
-      }
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) setFirstDrop(false);
+      if (chDropRef1.current && !chDropRef1.current.contains(event.target)) setChDrop1(false);
+      if (chDropRef2.current && !chDropRef2.current.contains(event.target)) setChDrop2(false);
+      if (chDropRef3.current && !chDropRef3.current.contains(event.target)) setChDrop3(false);
+      if (chDropRef4.current && !chDropRef4.current.contains(event.target)) setChDrop4(false);
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -402,11 +389,7 @@ const Navber = () => {
                 className="flex items-center gap-2 font-medium text-[#303030]"
               >
                 SEO Services
-                <FaAngleDown
-                  className={`transition-transform ${
-                    firstDrop ? "rotate-180" : "rotate-0"
-                  }`}
-                />
+                <FaAngleDown className={`transition-transform ${firstDrop ? "rotate-180" : "rotate-0"}`} />
               </button>
 
               {firstDrop && (
@@ -424,26 +407,16 @@ const Navber = () => {
                         <div className="absolute top-0 left-56 w-48 bg-[#F3F7FB] shadow-md p-2 rounded z-50">
                           <ul className="flex flex-col gap-1">
                             <li>
-                              <Link to="/WordPress" onClick={handleLinkClick}>
-                                WordPress SEO
-                              </Link>
+                              <Link to="/wordpress" onClick={handleLinkClick}>WordPress SEO</Link>
                             </li>
                             <li>
-                              <Link to="/WIxSeo" onClick={handleLinkClick}>
-                                Wix SEO
-                              </Link>
+                              <Link to="/wixseo" onClick={handleLinkClick}>Wix SEO</Link>
                             </li>
-                            <li
-                              onClick={handleLinkClick}
-                              className="cursor-pointer"
-                            >
-                              Squarespace SEO
+                            <li>
+                              <Link to="/squarespace" onClick={handleLinkClick}>Squarespace SEO</Link>
                             </li>
-                            <li
-                              onClick={handleLinkClick}
-                              className="cursor-pointer"
-                            >
-                              Joomla SEO
+                            <li>
+                              <Link to="/joomla" onClick={handleLinkClick}>Joomla SEO</Link>
                             </li>
                           </ul>
                         </div>
@@ -513,24 +486,16 @@ const Navber = () => {
 
             {/* Other Pages */}
             <li>
-              <Link to="/About" className="hover:text-purple-600">
-                About
-              </Link>
+              <Link to="/about" className="hover:text-purple-600">About</Link>
             </li>
             <li>
-              <Link to="/Portfolio" className="hover:text-purple-600">
-                Portfolio
-              </Link>
+              <Link to="/portfolio" className="hover:text-purple-600">Portfolio</Link>
             </li>
             <li>
-              <Link to="/Blog" className="hover:text-purple-600">
-                Blog
-              </Link>
+              <Link to="/blog" className="hover:text-purple-600">Blog</Link>
             </li>
             <li>
-              <button className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">
-                Contact
-              </button>
+              <button className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Contact</button>
             </li>
           </ul>
 
@@ -552,10 +517,8 @@ const Navber = () => {
                 onClick={() => setFirstDrop(!firstDrop)}
                 className="w-full flex justify-between items-center px-2 py-2 font-medium text-[#303030]"
               >
-                SEO Services{" "}
-                <FaAngleDown
-                  className={`${firstDrop ? "rotate-180" : ""} transition`}
-                />
+                SEO Services
+                <FaAngleDown className={`${firstDrop ? "rotate-180" : ""} transition`} />
               </button>
 
               {firstDrop && (
@@ -563,44 +526,32 @@ const Navber = () => {
                   <li>
                     <button
                       onClick={() => handleDropToggle(setChDrop1, chDrop1)}
-                      className="w-full text-left px-2 py-1 hover:bg-gray-100 rounded "
+                      className="w-full text-left px-2 py-1 hover:bg-gray-100 rounded"
                     >
                       CMS SEO
                     </button>
-                    {/* FIXED: dropdown visible in responsive */}
                     {chDrop1 && (
-                      <ul className="flex flex-col pl-4 mt-1 gap-1 sm:flex flex-col">
+                      <ul className="flex flex-col pl-4 mt-1 gap-1">
                         <li>
-                          <Link to="/WordPress" onClick={handleLinkClick}>
-                            WordPress SEO
-                          </Link>
+                          <Link to="/wordpress" onClick={handleLinkClick}>WordPress SEO</Link>
                         </li>
                         <li>
-                          <Link to="/WIxSeo" onClick={handleLinkClick}>
-                            Wix SEO
-                          </Link>
+                          <Link to="/wixseo" onClick={handleLinkClick}>Wix SEO</Link>
                         </li>
-                        <li
-                          onClick={handleLinkClick}
-                          className="cursor-pointer"
-                        >
-                          Squarespace SEO
+                        <li>
+                          <Link to="/squarespace" onClick={handleLinkClick}>Squarespace SEO</Link>
                         </li>
-                        <li
-                          onClick={handleLinkClick}
-                          className="cursor-pointer"
-                        >
-                          Joomla SEO
+                        <li>
+                          <Link to="/joomla" onClick={handleLinkClick}>Joomla SEO</Link>
                         </li>
                       </ul>
                     )}
                   </li>
 
+                  {/* Other CMS / E-commerce / Generative */}
+                  {/* Repeat similar structure as desktop */}
                   <li>
-                    <button
-                      onClick={() => handleDropToggle(setChDrop2, chDrop2)}
-                      className="w-full text-left px-2 py-1 hover:bg-gray-100 rounded"
-                    >
+                    <button onClick={() => handleDropToggle(setChDrop2, chDrop2)} className="w-full text-left px-2 py-1 hover:bg-gray-100 rounded">
                       E-commerce SEO
                     </button>
                     {chDrop2 && (
@@ -613,14 +564,11 @@ const Navber = () => {
                   </li>
 
                   <li>
-                    <button
-                      onClick={() => handleDropToggle(setChDrop3, chDrop3)}
-                      className="w-full text-left px-2 py-1 hover:bg-gray-100 rounded"
-                    >
+                    <button onClick={() => handleDropToggle(setChDrop3, chDrop3)} className="w-full text-left px-2 py-1 hover:bg-gray-100 rounded">
                       Other SEO Service
                     </button>
                     {chDrop3 && (
-                      <ul className="flex flex-col pl-4 mt-1 gap-1 ">
+                      <ul className="flex flex-col pl-4 mt-1 gap-1">
                         <li>Local SEO</li>
                         <li>Link Building</li>
                         <li>On Page SEO</li>
@@ -629,10 +577,7 @@ const Navber = () => {
                   </li>
 
                   <li>
-                    <button
-                      onClick={() => handleDropToggle(setChDrop4, chDrop4)}
-                      className="w-full text-left px-2 py-1 hover:bg-gray-100 rounded"
-                    >
+                    <button onClick={() => handleDropToggle(setChDrop4, chDrop4)} className="w-full text-left px-2 py-1 hover:bg-gray-100 rounded">
                       Generative SEO
                     </button>
                     {chDrop4 && (
@@ -648,42 +593,16 @@ const Navber = () => {
             </li>
 
             <li>
-              
+              <Link to="/about" className="px-2 py-2 block" onClick={handleLinkClick}>About</Link>
             </li>
             <li>
-              <Link
-                to="/About"
-                className="px-2 py-2 block"
-                onClick={handleLinkClick}
-              >
-                About
-              </Link>
+              <Link to="/portfolio" className="px-2 py-2 block" onClick={handleLinkClick}>Portfolio</Link>
             </li>
             <li>
-              <Link
-                to="/Portfolio"
-                className="px-2 py-2 block"
-                onClick={handleLinkClick}
-              >
-                Portfolio
-              </Link>
+              <Link to="/blog" className="px-2 py-2 block" onClick={handleLinkClick}>Blog</Link>
             </li>
             <li>
-              <Link
-                to="/Blog"
-                className="px-2 py-2 block"
-                onClick={handleLinkClick}
-              >
-                Blog
-              </Link>
-            </li>
-            <li>
-              <button
-                className="bg-purple-600 text-white px-4 py-2 rounded w-full mt-2"
-                onClick={handleLinkClick}
-              >
-                Contact
-              </button>
+              <button className="bg-purple-600 text-white px-4 py-2 rounded w-full mt-2" onClick={handleLinkClick}>Contact</button>
             </li>
           </ul>
         </div>

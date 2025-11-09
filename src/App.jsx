@@ -7,6 +7,8 @@ import Process from './page/Process';
 import Portfolio from './page/Portfolio';
 import Blog from './page/Blog';
 import WorldPress from './page/navberPage/WorldPress';
+import WIxSeo from './page/navberPage/WIxSeo';
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
             <Route path='/Portfolio' element={<Portfolio/>} />
             <Route path='/Blog' element={<Blog/>} />
             <Route path='/WordPress' element={<WorldPress/>} />
+            <Route path='/WIxSeo' element={<WIxSeo/>} />
           </Route>
         </Routes>
       
