@@ -3,16 +3,17 @@ import Container from "../component/Container";
 import Slider from "react-slick";
 
 const Client = () => {
-  var settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 2,
-    autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 1000,
-    cssEase: "linear"
-  };
+var settings = {
+  dots: true,
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  autoplay: true,
+  speed: 1500,          // slide transition smooth speed
+  autoplaySpeed: 2500,  // time between slides (slower + smooth)
+  cssEase: "ease-in-out"
+};
+
 
   return (
     <>
