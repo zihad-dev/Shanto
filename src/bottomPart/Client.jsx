@@ -42,143 +42,26 @@ const Client = () => {
     `}
             </style>
 
-            <Slider {...settings}>
-              <div>
-                <a
-                  href="https://www.facebook.com/mdhasiburrahman.santo.9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="w-[160px] h-[100px] border flex items-center justify-center bg-[#F6EBFE] rounded-xl shadow cursor-pointer hover:shadow-lg transition">
-                    <div className="w-[60px] h-[60px] flex items-center justify-center">
-                      <img
-                        className="w-full h-full object-contain"
-                        src="./images/icon/facebook.png"
-                        alt="Facebook Icon"
-                      />
-                    </div>
-                  </div>
-                </a>
+            <Slider {...settings} >
+              <div className="w-[400px] h-[200px] bg-red-500">
+                
               </div>
-              <div>
-                <a
-                  href="https://www.instagram.com/mr__shant0//mdhasiburrahman.santo.9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="w-[160px] h-[100px] border flex items-center justify-center bg-[#F6EBFE] rounded-xl shadow cursor-pointer hover:shadow-lg transition">
-                    <div className="w-[60px] h-[60px] flex items-center justify-center">
-                      <img
-                        className="w-full h-full object-contain"
-                        src="./images/icon/instagram.png"
-                        alt="Instagram Icon"
-                      />
-                    </div>
-                  </div>
-                </a>
+              <div className="w-[400px] h-[200px] bg-red-500">
+                
               </div>
-              <div>
-                <a
-                  href="https://www.linkedin.com/in/md-hasibur-rahman-shanto"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="w-[160px] h-[100px] border flex items-center justify-center bg-[#F6EBFE] rounded-xl shadow cursor-pointer hover:shadow-lg transition">
-                    <div className="w-[60px] h-[60px] flex items-center justify-center">
-                      <img
-                        className="w-full h-full object-contain"
-                        src="./images/icon/linkedin.png"
-                        alt="Ilinkedin Icon"
-                      />
-                    </div>
-                  </div>
-                </a>
+              <div className="w-[400px] h-[200px] bg-red-500">
+                
               </div>
-              <div>
-                <a
-                  href="https://x.com/Hasibur45690"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="w-[160px] h-[100px] border flex items-center justify-center bg-[#F6EBFE] rounded-xl shadow cursor-pointer hover:shadow-lg transition">
-                    <div className="w-[60px] h-[60px] flex items-center justify-center">
-                      <img
-                        className="w-full h-full object-contain"
-                        src="./images/icon/x.png"
-                        alt="X Icon"
-                      />
-                    </div>
-                  </div>
-                </a>
+              <div className="w-[400px] h-[200px] bg-red-500">
+                
               </div>
-              <div>
-                <a
-                  href="https://www.facebook.com/mdhasiburrahman.santo.9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="w-[160px] h-[100px] border flex items-center justify-center bg-[#F6EBFE] rounded-xl shadow cursor-pointer hover:shadow-lg transition">
-                    <div className="w-[60px] h-[60px] flex items-center justify-center">
-                      <img
-                        className="w-full h-full object-contain"
-                        src="./images/icon/facebook.png"
-                        alt="Facebook Icon"
-                      />
-                    </div>
-                  </div>
-                </a>
+              <div className="w-[400px] h-[200px] bg-red-500">
+                
               </div>
-              <div>
-                <a
-                  href="https://www.instagram.com/mr__shant0//mdhasiburrahman.santo.9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="w-[160px] h-[100px] border flex items-center justify-center bg-[#F6EBFE] rounded-xl shadow cursor-pointer hover:shadow-lg transition">
-                    <div className="w-[60px] h-[60px] flex items-center justify-center">
-                      <img
-                        className="w-full h-full object-contain"
-                        src="./images/icon/instagram.png"
-                        alt="Instagram Icon"
-                      />
-                    </div>
-                  </div>
-                </a>
+              <div className="w-[400px] h-[200px] bg-red-500">
+                
               </div>
-              <div>
-                <a
-                  href="https://www.linkedin.com/in/md-hasibur-rahman-shanto"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="w-[160px] h-[100px] border flex items-center justify-center bg-[#F6EBFE] rounded-xl shadow cursor-pointer hover:shadow-lg transition">
-                    <div className="w-[60px] h-[60px] flex items-center justify-center">
-                      <img
-                        className="w-full h-full object-contain"
-                        src="./images/icon/linkedin.png"
-                        alt="Ilinkedin Icon"
-                      />
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div>
-                <a
-                  href="https://x.com/Hasibur45690"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="w-[160px] h-[100px] border flex items-center justify-center bg-[#F6EBFE] rounded-xl shadow cursor-pointer hover:shadow-lg transition">
-                    <div className="w-[60px] h-[60px] flex items-center justify-center">
-                      <img
-                        className="w-full h-full object-contain"
-                        src="./images/icon/x.png"
-                        alt="X Icon"
-                      />
-                    </div>
-                  </div>
-                </a>
-              </div>
+             
                
             </Slider>
           </div>
