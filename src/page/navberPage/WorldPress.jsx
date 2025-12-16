@@ -19,18 +19,18 @@ const WorldPress = () => {
   ];
   const betterSections = [
     {
-      title: "Better way to",
+      title: "A Better Way to",
       highlight: "Grow",
       titleEnd: "your website",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint itaque doloremque corrupti ut cupiditate modi a blanditiis, error consequatur eos nobis adipisci explicabo vero veritatis?",
+        "Your website has huge potential—if it’s optimized correctly. I focus on improving your ranking, fixing technical issues, enhancing user experience, and creating content that search engines and users love. The result? Steady, sustainable growth.",
     },
     {
       title: "Smarter way to",
       highlight: "Optimize",
       titleEnd: "your business",
       description:
-        "We provide professional SEO and growth strategies to help you reach the top of search engines and convert traffic into customers.",
+        "As an SEO and growth specialist, I focus on improving your search rankings, optimizing your content, and strengthening your online presence—so your business gets more visibility, more leads, and more conversions.",
     },
   ];
   const handleBookCall = () => {
@@ -60,15 +60,15 @@ const WorldPress = () => {
     <div className="mt-[100px]">
       <Container>
         <Rank
-          heading="Rank Your WordPress Website On Google"
-          highlightText="Get Tips From Top SEO Experts"
+          heading="Rank Your WordPress Website on Google With Expert-Level SEO Guidance"
+          highlightText="Stay ahead of competitors with insights, techniques, and AI-powered strategies trusted by leading SEO professionals."
           imageText="WordPress SEO"
-          phoneNumber="8801749286221"
+          phoneNumber="8801971762844"
         />
         <ContentLogo title="Our Trusted Partners" logos={partners} />
         <ContentVideo
           title="WordPress SEO Optimization"
-          description="SEO is one of the most powerful features of WordPress. However, just using WordPress as your CMS and using plugins won’t lead to higher search engine rankings. By having our WordPress SEO experts optimize your website, you’ll take advantage of the platform’s full power."
+          description="Although WordPress is SEO-friendly, expert optimization—not just plugins—is what truly leads to higher rankings. I fine-tune your technical setup, on-page structure, and content performance so your site can compete and rank effectively."
           videoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ"
           gradientFrom="#A53DFF"
           gradientTo="#9333EA"
@@ -80,8 +80,8 @@ const WorldPress = () => {
           bgColor="#A53DFF"
         />
         <OptimizeWordPress
-          ctaTitle="Ready To Optimise Your WordPress Site?"
-          ctaText="If you’d like to optimize your WordPress site for search engines, get in touch with our experienced team of WordPress SEO experts today!"
+          ctaTitle="Ready to Optimize Your WordPress Site?"
+          ctaText="If you’d like to get your WordPress site performing better on search engines, I’m here to help. Reach out, and I’ll take care of the SEO for you."
           buttonText="BOOK A CALL"
           onButtonClick={handleBookCall}
           imageSrc="https://cdn-icons-png.flaticon.com/512/6165/6165119.png"
