@@ -54,7 +54,7 @@ const Home = () => {
           <div className="lg:w-1/2 flex justify-center">
             <div className="max-w-[535px] h-[400px] sm:h-[500px] lg:h-[590px]  rounded-[15px]">
               <div className="w-full h-full overflow-hidden rounded-[15px]">
-                <img src="images/Hasib Rahman.jpg" alt="Hasib Rahman" />
+                <img src="images/Hasibur Rahman.jpg" alt="Hasib Rahman" />
               </div>
             </div>
           </div>

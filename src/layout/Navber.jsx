@@ -373,11 +373,15 @@ const Navber = () => {
   return (
     <div className="fixed top-0 left-0 w-full bg-white z-50 shadow-sm">
       <Container>
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-4 ">
           {/* Logo */}
-          <div className="w-[20%] flex items-center">
+          <div className="w-[20%] h-auto flex items-center">
             <Link to="/">
-              <img src="images/Logo.png" alt="Logo" className="h-10" />
+              <img
+                src="/images/Logo.svg"
+                alt="Logo"
+                className="h-18 object-contain "
+              />
             </Link>
           </div>
 

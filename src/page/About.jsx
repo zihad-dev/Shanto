@@ -12,7 +12,7 @@ const About = () => {
           <div className="relative md:w-[420px] h-[460px] rounded-lg  flex-shrink-0">
               <img
                 className="w-full h-full object-contain"
-                src="./images/Hasib Rahman.jpg"
+                src="./images/Hasibur Rahman.jpg"
                 alt=""
               />
             
