@@ -8,7 +8,7 @@ const Faq = () => {
     {
       question: "How does SEO work on WordPress?",
       answer:
-        "SEO works wonderfully on WordPress. With WordPress’ many plugins and other options, you can ensure your SEO is fully optimized. A WordPress SEO agency can help you rank on Google and maintain a great position on the search engine.",
+        "WordPress is built for search visibility. Its clean architecture allows me to easily optimize technical elements, speed, and metadata, making it easier for Google to rank your site compared to other platforms.",
     },
     {
       question: "How to improve SEO ranking WordPress?",

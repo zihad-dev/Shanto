@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "../component/Container";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -11,7 +12,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-0 py-10">
             {/* Logo + About */}
             <div className="w-full md:w-1/3">
-              <h2 className="text-2xl font-bold mb-3">MyCompany</h2>
+              <h2 className="text-2xl font-bold mb-3">Md Hasibur Rahman</h2>
               <p className= "max-w-[320px] text-gray-300 text-sm leading-relaxed">
                 We provide top-notch web development and SEO services to help your
                 business grow online and stand out in search results.
@@ -22,20 +23,24 @@ const Footer = () => {
             <div className="w-full md:w-1/3">
               <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2 text-gray-300 text-sm">
-                <li className="hover:text-blue-400 transition-all cursor-pointer">
-                  Home
+                <li>
+                 <Link to="/" className="hover:text-blue-400 transition-all cursor-pointer"> Home</Link>
                 </li>
-                <li className="hover:text-blue-400 transition-all cursor-pointer">
-                  About Us
+                <li>
+                   <Link to="/about" className="hover:text-blue-400 transition-all cursor-pointer">About Us</Link>
+                  
                 </li>
-                <li className="hover:text-blue-400 transition-all cursor-pointer">
-                  Services
+                <li>
+                    <Link to="/services"  className="hover:text-blue-400 transition-all cursor-pointer">Services</Link>
+                  
                 </li>
-                <li className="hover:text-blue-400 transition-all cursor-pointer">
-                  Contact
+                <li>
+                 <Link to="/contact" className="hover:text-blue-400 transition-all cursor-pointer">Contact</Link>
+                  
                 </li>
-                <li className="hover:text-blue-400 transition-all cursor-pointer">
-                  Blog
+                <li>
+                  <Link to="/blog" className="hover:text-blue-400 transition-all cursor-pointer">Blog</Link>
+                  
                 </li>
               </ul>
             </div>
@@ -74,7 +79,7 @@ const Footer = () => {
 
           {/* Bottom Section */}
           <div className="border-t border-white/10 text-center py-6 text-gray-400 text-sm">
-            © {new Date().getFullYear()} MyCompany. All Rights Reserved.
+            © {new Date().getFullYear()} hasib. All Rights Reserved.
           </div>
         </Container>
       </div>
