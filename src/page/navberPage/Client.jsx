@@ -115,10 +115,6 @@ const Client = () => {
     autoplaySpeed: 2500,
     arrows: false,
     pauseOnHover: true,
-    responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 2 } },
-      { breakpoint: 640, settings: { slidesToShow: 1 } },
-    ],
   };
 
   const clients = [
@@ -144,10 +140,24 @@ const Client = () => {
       img: "https://cdn-icons-png.flaticon.com/512/2202/2202112.png",
     },
     {
+      name: "John Smith",
+      position: "CTO, NexaTech",
+      review:
+        "Corrupti ut cupiditate modi blanditiis, error consequatur eos nobis adipisci explicabo vero veritatis.",
+      img: "https://cdn-icons-png.flaticon.com/512/2202/2202112.png",
+    },
+    {
       name: "Ayesha Akter",
       position: "Manager, DevSoft",
       review:
-        "Sint itaque doloremque corrupti ut cupiditate modi a blanditiis, error consequatur eos nobis adipisci explicabo vero veritatis.",
+        "Sint itaque doloremque corrupti ut cupiditate modi a blanditiis, error consequatur eos nobis adipisci.",
+      img: "https://cdn-icons-png.flaticon.com/512/2922/2922561.png",
+    },
+    {
+      name: "Ayesha Akter",
+      position: "Manager, DevSoft",
+      review:
+        "Sint itaque doloremque corrupti ut cupiditate modi a blanditiis, error consequatur eos nobis adipisci.",
       img: "https://cdn-icons-png.flaticon.com/512/2922/2922561.png",
     },
   ];

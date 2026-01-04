@@ -1,5 +1,8 @@
 import React from "react";
+import { FaFacebook, FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaSquareWhatsapp } from "react-icons/fa6";
 import { IoLocationOutline } from "react-icons/io5";
+import { MdAttachEmail } from "react-icons/md";
 
 const Discuss = () => {
   return (
@@ -21,16 +24,25 @@ const Discuss = () => {
             <div className="flex flex-col gap-[12px]">
               {[
                 {
+                  icon: (
+                    <IoLocationOutline className="text-[20px] text-[#A53DFF] group-hover:text-white" />
+                  ),
                   title: "Address:",
-                  value: "New Mexico 31134",
+                  value: "Pabna, Bangladesh",
                 },
                 {
+                  icon: (
+                    <MdAttachEmail className="text-[20px] text-[#A53DFF] group-hover:text-white" />
+                  ),
                   title: "My Email:",
-                  value: "zihadvai42@gmail.com",
+                  value: "11hasibrahman@gmail.com",
                 },
                 {
+                  icon: (
+                    <FaSquareWhatsapp className="text-[20px] text-[#A53DFF] group-hover:text-white" />
+                  ),
                   title: "Call Me Now:",
-                  value: "01749286221",
+                  value: "+8801971762844",
                 },
               ].map((item, i) => (
                 <div
@@ -45,7 +57,8 @@ const Discuss = () => {
                   }
                 >
                   <div className="p-[12px] bg-[#F6EBFF] rounded group-hover:bg-[#A53DFF] transition-all duration-300">
-                    <IoLocationOutline className="text-[20px] text-[#A53DFF] group-hover:text-white" />
+                    {/* <IoLocationOutline className="text-[20px] text-[#A53DFF] group-hover:text-white" /> */}
+                    {item.icon}
                   </div>
                   <div>
                     <h4 className="font-[Work Sans] font-normal text-[14px] text-[#424E60] mb-[4px]">
@@ -61,14 +74,38 @@ const Discuss = () => {
 
             {/* Social Icons */}
             <div className="flex flex-wrap gap-[12px] mt-[24px]">
-              {[...Array(5)].map((_, i) => (
-                <div
-                  key={i}
-                  className="p-[12px] bg-[#F6EBFF] rounded hover:bg-[#A53DFF] transition-all duration-300"
-                >
-                  <IoLocationOutline className="text-[20px] text-[#A53DFF] hover:text-white" />
-                </div>
-              ))}
+              <a
+                href="https://www.facebook.com/mdhasiburrahman.santo.9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-[12px] bg-[#F6EBFF] rounded group hover:bg-[#A53DFF] transition-all duration-300"
+              >
+                <FaFacebookF className="text-[20px] text-[#A53DFF] group-hover:text-white transition-colors duration-300" />
+              </a>
+              <a
+                href="https://x.com/Hasibur45690"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-[12px] bg-[#F6EBFF] rounded group hover:bg-[#A53DFF] transition-all duration-300"
+              >
+                <FaTwitter className="text-[20px] text-[#A53DFF] group-hover:text-white transition-colors duration-300" />
+              </a>
+              <a
+                href="https://www.instagram.com/mr__shant0/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-[12px] bg-[#F6EBFF] rounded group hover:bg-[#A53DFF] transition-all duration-300"
+              >
+                <FaInstagram className="text-[20px] text-[#A53DFF] group-hover:text-white transition-colors duration-300" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/md-hasibur-rahman-shanto/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-[12px] bg-[#F6EBFF] rounded group hover:bg-[#A53DFF] transition-all duration-300"
+              >
+                <FaLinkedinIn className="text-[20px] text-[#A53DFF] group-hover:text-white transition-colors duration-300" />
+              </a>
             </div>
           </div>
 

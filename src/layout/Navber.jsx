@@ -375,7 +375,7 @@ const Navber = () => {
       <Container>
         <div className="flex justify-between items-center py-4 ">
           {/* Logo */}
-          <div className="w-[20%] h-auto flex items-center">
+          <div className="w-[20%] h-[25px] ">
             <Link to="/">
               <img
                 src="/images/Logo.svg"
