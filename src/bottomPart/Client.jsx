@@ -42,7 +42,7 @@ const Client = () => {
     `}
             </style>
 
-            <Slider {...settings} >
+            {/* <Slider {...settings} >
               <div className="w-[400px] h-[200px] bg-red-500">
                 
               </div>
@@ -63,7 +63,7 @@ const Client = () => {
               </div>
              
                
-            </Slider>
+            </Slider> */}
           </div>
         </Container>
       </div>

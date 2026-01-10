@@ -373,14 +373,14 @@ const Navber = () => {
   return (
     <div className="fixed top-0 left-0 w-full bg-white z-50 shadow-sm">
       <Container>
-        <div className="flex justify-between items-center py-4 ">
+        <div className="flex justify-between md:items-center py-4 ">
           {/* Logo */}
-          <div className="w-[20%] h-[25px] ">
+          <div className="md:w-[20%] md:h-[25px] w-[40%] h-[30px] ml-2">
             <Link to="/">
               <img
                 src="/images/Logo.svg"
                 alt="Logo"
-                className="h-18 object-contain "
+                className="md:h-18 object-contain h-17 "
               />
             </Link>
           </div>
@@ -397,7 +397,7 @@ const Navber = () => {
               </button>
 
               {firstDrop && (
-                <div className="absolute top-10 left-0 w-64 bg-[#F3F7FB] shadow-xl p-4 rounded-md z-50">
+                <div className="absolute top-10 left-0 w-64 bg-[#F3F7FB] shadow-xl p-4 rounded-md md:z-50">
                   <ul className="flex flex-col gap-2">
                     {/* CMS SEO */}
                     <li className="relative" ref={chDropRef1}>
@@ -408,7 +408,7 @@ const Navber = () => {
                         CMS SEO
                       </button>
                       {chDrop1 && (
-                        <div className="absolute top-0 left-56 w-48 bg-[#F3F7FB] shadow-md p-2 rounded z-50">
+                        <div className="absolute top-0 left-56 w-48 bg-[#F3F7FB] shadow-md p-2 rounded md:z-50">
                           <ul className="flex flex-col gap-1">
                             <li>
                               <Link to="/wordpress" onClick={handleLinkClick}>WordPress SEO</Link>
@@ -455,7 +455,7 @@ const Navber = () => {
                         Other SEO Service
                       </button>
                       {chDrop3 && (
-                        <div className="absolute top-0 left-56 w-48 bg-[#F3F7FB] shadow-md p-2 rounded z-50">
+                        <div className="absolute top-0 left-56 w-48 md:bg-[#F3F7FB] shadow-md p-2 rounded md:z-50">
                           <ul className="flex flex-col gap-1">
                             <li>Local SEO</li>
                             <li>Link Building</li>
@@ -474,7 +474,7 @@ const Navber = () => {
                         Generative SEO
                       </button>
                       {chDrop4 && (
-                        <div className="absolute top-0 left-56 w-48 bg-[#F3F7FB] shadow-md p-2 rounded z-50">
+                        <div className="absolute top-0 left-56 w-48 bg-[#F3F7FB] shadow-md p-2 rounded md:z-50">
                           <ul className="flex flex-col gap-1">
                             <li>AEO</li>
                             <li>GEO</li>
@@ -527,7 +527,7 @@ const Navber = () => {
 
               {firstDrop && (
                 <ul className="flex flex-col pl-4 mt-2 gap-1">
-                  <li>
+                  <li >
                     <button
                       onClick={() => handleDropToggle(setChDrop1, chDrop1)}
                       className="w-full text-left px-2 py-1 hover:bg-gray-100 rounded"
@@ -535,7 +535,7 @@ const Navber = () => {
                       CMS SEO
                     </button>
                     {chDrop1 && (
-                      <ul className="flex flex-col pl-4 mt-1 gap-1">
+                      <ul className="flex flex-col pl-4 mt-1 gap-1  z-50">
                         <li>
                           <Link to="/wordpress" onClick={handleLinkClick}>WordPress SEO</Link>
                         </li>

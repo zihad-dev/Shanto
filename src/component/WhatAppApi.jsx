@@ -27,6 +27,7 @@ const WhatsAppWidget = () => {
           minute: "2-digit",
         });
         setTime(formatted);
+ 
       }
       return !prev;
     });
@@ -36,7 +37,7 @@ const WhatsAppWidget = () => {
     <div>
       {/* Floating Button */}
       <div
-        onClick={handleToggle}
+        onClick={() =>handleToggle(!open)}
         className="fixed bottom-5 right-5 bg-[#25D366] w-14 h-14 flex items-center justify-center rounded-full shadow-lg cursor-pointer z-50 sm:w-16 sm:h-16"
       >
         <img
@@ -50,7 +51,7 @@ const WhatsAppWidget = () => {
       {open && (
         <div
           ref={openRef}
-          className="fixed bottom-20 right-5 w-72 sm:w-80 bg-white rounded-xl shadow-xl z-50 overflow-hidden flex flex-col"
+          className="fixed bottom-20 right-0 w-70 md:w-80 bg-white rounded-xl shadow-xl z-50 overflow-hidden flex flex-col"
         >
           {/* Header */}
           <div className="bg-[#075E54] text-white p-3 flex items-center gap-3">
@@ -59,8 +60,8 @@ const WhatsAppWidget = () => {
               alt="profile"
               className="w-10 h-10 rounded-full"
             />
-            <div className="flex flex-col text-sm sm:text-base">
-              <strong>Jihadul Islam</strong>
+            <div className="flex flex-col text-sm md:text-base"> 
+              <strong>Md Hasibur Rahman Shanto</strong>
               <span className="text-xs sm:text-sm">SEO Expert & Consultant</span>
             </div>
           </div>
@@ -68,8 +69,8 @@ const WhatsAppWidget = () => {
           {/* Body */}
           <div className="p-3 text-sm text-gray-800 flex flex-col gap-1">
             <p>
-              <strong>Jihadul</strong> <br />
-              Contact Jihadul Islam Today!
+              <strong>Hasibur</strong> <br />
+              Contact Hasibur Rahman Today!
             </p>
             <small className="text-gray-500">{time}</small>
           </div>
