@@ -10,12 +10,13 @@ const BottomPart = () => {
     <>
       <Container>
         <Client />
-        {/* <Testmonial/> */}
-        {/* <Discuss/> */}
+        <Testmonial/>
+        <Discuss/>
       
       </Container>
         <div>
-          {/* <Footer/> */}
+          <Footer/>
+
         </div>
     </>
   );

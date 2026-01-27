@@ -37,7 +37,7 @@ const Home = () => {
               ].map((stat, idx) => (
                 <div
                   key={idx}
-                  className="flex-1 md:min-w-[150px] w-[120px] py-4 bg-[#F6EBFE] flex flex-col items-center justify-center rounded-lg"
+                  className="flex-1 md:min-w-[100px] w-[120px] py-4 bg-[#F6EBFE] flex flex-col items-center justify-center rounded-lg gap-2 mb-4"
                 >
                   <h4 className="font-['Work Sans'] font-semibold md:text-3xl text-[22px] text-[#424E60] mb-2">
                     {stat.number}

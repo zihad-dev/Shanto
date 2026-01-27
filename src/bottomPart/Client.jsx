@@ -16,11 +16,11 @@ const Client = () => {
 
   return (
     <>
-      <div className="py-[100px] bg-white">
+      <div className="md:py-[100px] py-[30px] bg-white">
         <Container>
           {/* Heading */}
           <div className="text-center mb-10 px-4">
-            <h3 className="text-lg font-medium text-[#555] mb-2">
+            <h3 className="md:text-lg text-[15px] font-medium text-[#555] mb-2">
               Hello I am Md Hasibur Rahman Shanto
             </h3>
             <h2 className="font-[Work Sans] font-semibold text-[32px] md:text-[48px] text-[#132238] leading-[40px] md:leading-[56px] mb-[16px]">
@@ -42,28 +42,28 @@ const Client = () => {
     `}
             </style>
 
-            {/* <Slider {...settings} >
-              <div className="w-[400px] h-[200px] bg-red-500">
+            <Slider {...settings} >
+              <div className="md:w-[400px]w-[200px] md:h-[200px] h-[100px] bg-red-500">
                 
               </div>
-              <div className="w-[400px] h-[200px] bg-red-500">
+              <div className="md:w-[400px]w-[200px] md:h-[200px] h-[100px] bg-red-500">
                 
               </div>
-              <div className="w-[400px] h-[200px] bg-red-500">
+              <div className="md:w-[400px]w-[200px] md:h-[200px] h-[100px] bg-red-500">
                 
               </div>
-              <div className="w-[400px] h-[200px] bg-red-500">
+              <div className="md:w-[400px]w-[200px] md:h-[200px] h-[100px] bg-red-500">
                 
               </div>
-              <div className="w-[400px] h-[200px] bg-red-500">
+              <div className="md:w-[400px]w-[200px] md:h-[200px] h-[100px] bg-red-500">
                 
               </div>
-              <div className="w-[400px] h-[200px] bg-red-500">
+              <div className="md:w-[400px]w-[200px] md:h-[200px] h-[100px] bg-red-500">
                 
               </div>
              
                
-            </Slider> */}
+            </Slider>
           </div>
         </Container>
       </div>

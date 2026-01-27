@@ -12,10 +12,10 @@ const Discuss = () => {
         <div className="flex flex-col lg:flex-row justify-between gap-10 lg:gap-20">
           {/* Left Info Section */}
           <div className="flex-1">
-            <h3 className="font-[Work Sans] font-semibold text-[28px] sm:text-[32px] md:text-[38px] text-[#132238] leading-[40px] sm:leading-[50px] mb-[8px]">
+            <h3 className="font-[Work Sans] font-semibold md:text-[38px]  text-[20px] text-[#132238] leading-[40px] sm:leading-[50px] md:mb-[8px] mb-[4px]" >
               Let’s discuss your Project
             </h3>
-            <p className="font-[Work Sans] font-normal text-[16px] md:text-[18px] text-[#87909D] leading-[24px] mb-[35px] max-w-[480px]">
+            <p className="font-[Work Sans] font-normal md:text-[18px] text-[16px] text-[#87909D] leading-[24px] md:mb-[35px] mb-[25px] max-w-[480px]">
               There are many variations of passages of Lorem Ipsum available,
               but the majority have suffered alteration.
             </p>
@@ -25,21 +25,21 @@ const Discuss = () => {
               {[
                 {
                   icon: (
-                    <IoLocationOutline className="text-[20px] text-[#A53DFF] group-hover:text-white" />
+                    <IoLocationOutline className="md:text-[20px] text-[16px] text-[#A53DFF] group-hover:text-white" />
                   ),
-                  title: "Address:",
+                  title: "Address:" ,
                   value: "Pabna, Bangladesh",
                 },
                 {
                   icon: (
-                    <MdAttachEmail className="text-[20px] text-[#A53DFF] group-hover:text-white" />
+                    <MdAttachEmail className="md:text-[20px] text-[16px] text-[#A53DFF] group-hover:text-white" />
                   ),
                   title: "My Email:",
                   value: "11hasibrahman@gmail.com",
                 },
                 {
                   icon: (
-                    <FaSquareWhatsapp className="text-[20px] text-[#A53DFF] group-hover:text-white" />
+                    <FaSquareWhatsapp className="md:text-[20px] text-[16px] text-[#A53DFF] group-hover:text-white" />
                   ),
                   title: "Call Me Now:",
                   value: "+8801971762844",
@@ -73,7 +73,7 @@ const Discuss = () => {
             </div>
 
             {/* Social Icons */}
-            <div className="flex flex-wrap gap-[12px] mt-[24px]">
+            <div className="flex flex-wrap md:gap-[12px] mt-[24px] justify-between sm:justify-start gap-[8px]">
               <a
                 href="https://www.facebook.com/mdhasiburrahman.santo.9"
                 target="_blank"
@@ -111,7 +111,7 @@ const Discuss = () => {
 
           {/* Right Form Section */}
           <div className="flex-1">
-            <p className="text-[#87909D] text-[15px] mb-[20px]">
+            <p className="text-[#87909D] text-[15px] MD:mb-[20px] mb-[15px]">
               There are many variations of passages of Lorem Ipsum available,
               but the majority have suffered alteration.
             </p>
