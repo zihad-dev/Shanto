@@ -371,7 +371,7 @@ const Navber = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-white z-50 shadow-sm">
+    <div className="fixed top-0 left-0 w-[100%] bg-white z-50 shadow-sm ">
       <Container>
         <div className="flex justify-between md:items-center py-4 ">
           {/* Logo */}
@@ -504,7 +504,7 @@ const Navber = () => {
           </ul>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden mr-2">
+          <div className="md:hidden  w-full flex justify-end">
             <button onClick={() => setMobileMenu(!mobileMenu)}>
               {mobileMenu ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>

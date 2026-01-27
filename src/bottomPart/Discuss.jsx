@@ -7,7 +7,7 @@ import { MdAttachEmail } from "react-icons/md";
 const Discuss = () => {
   return (
     <>
-      <div className="relative z-20 max-w-[1320px] bg-white p-6 sm:p-10 md:p-[60px] lg:p-[88px] mb-[100px] rounded-[15px] shadow-[0px_4px_20px_rgba(0,0,0,0.1)] mx-auto">
+      <div className="relative z-20 w-full overflow-x-hidden sm:max-w-[1320px] bg-white p-6 sm:p-10 md:p-[60px] lg:p-[88px] mb-[100px] rounded-[15px] shadow-[0px_4px_20px_rgba(0,0,0,0.1)] mx-auto">
         {/* Responsive Layout */}
         <div className="flex flex-col lg:flex-row justify-between gap-10 lg:gap-20">
           {/* Left Info Section */}

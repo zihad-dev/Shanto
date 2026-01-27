@@ -21,7 +21,7 @@ const Testmonial = () => {
   tincidunt ut sapien. Morbi ornare elit at libero suscipit porta.`;
   return (
     <>
-      <div className=" mt-[10px] pb-[100px] px-4 md:px-8 lg:px-0">
+      <div className=" mt-[10px] pb-[100px] px-4 md:px-8 lg:px-0 overflow-x-hidden">
         {/* Section Header */}
         <div className="text-center md:mb-[70px] mb-[35px] ">
           <h2 className="font-[Work Sans] font-semibold md:text-[32px] text-[25px] lg:text-[48px] text-[#132238] leading-tight mb-[16px]">

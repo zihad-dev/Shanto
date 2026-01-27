@@ -16,7 +16,7 @@ const Client = () => {
 
   return (
     <>
-      <div className="md:py-[100px] py-[30px] bg-white">
+      <div className="md:py-[100px] py-[30px] bg-white overflow-x-hidden">
         <Container>
           {/* Heading */}
           <div className="text-center mb-10 px-4">
@@ -36,33 +36,19 @@ const Client = () => {
           <div>
             <style>
               {`
-      .slick-slide > div {
+        .slick-slide > div {
         padding: 5px; /* total gap 5px */
-      }
+        }
     `}
             </style>
 
-            <Slider {...settings} >
-              <div className="md:w-[400px]w-[200px] md:h-[200px] h-[100px] bg-red-500">
-                
-              </div>
-              <div className="md:w-[400px]w-[200px] md:h-[200px] h-[100px] bg-red-500">
-                
-              </div>
-              <div className="md:w-[400px]w-[200px] md:h-[200px] h-[100px] bg-red-500">
-                
-              </div>
-              <div className="md:w-[400px]w-[200px] md:h-[200px] h-[100px] bg-red-500">
-                
-              </div>
-              <div className="md:w-[400px]w-[200px] md:h-[200px] h-[100px] bg-red-500">
-                
-              </div>
-              <div className="md:w-[400px]w-[200px] md:h-[200px] h-[100px] bg-red-500">
-                
-              </div>
-             
-               
+            <Slider {...settings} className="w-full">
+              <div className="md:w-[400px]w-[200px] md:h-[200px] h-[100px] bg-red-500"></div>
+              <div className="md:w-[400px]w-[200px] md:h-[200px] h-[100px] bg-red-500"></div>
+              <div className="md:w-[400px]w-[200px] md:h-[200px] h-[100px] bg-red-500"></div>
+              <div className="md:w-[400px]w-[200px] md:h-[200px] h-[100px] bg-red-500"></div>
+              <div className="md:w-[400px]w-[200px] md:h-[200px] h-[100px] bg-red-500"></div>
+              <div className="md:w-[400px]w-[200px] md:h-[200px] h-[100px] bg-red-500"></div>
             </Slider>
           </div>
         </Container>
