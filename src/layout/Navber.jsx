@@ -504,7 +504,7 @@ const Navber = () => {
           </ul>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden mr-2">
             <button onClick={() => setMobileMenu(!mobileMenu)}>
               {mobileMenu ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>

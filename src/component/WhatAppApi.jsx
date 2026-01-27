@@ -4,6 +4,20 @@ const WhatsAppWidget = () => {
   const [open, setOpen] = useState(false);
   const [time, setTime] = useState(""); // dynamic time
   const openRef = useRef(null);
+  const fullText = "Contact Hasibur Rahman Today!";
+  const [displayText, setDisplayText] = useState("");
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (index < fullText.length) {
+      const timeout = setTimeout(() => {
+        setDisplayText((prev) => prev + fullText[index]);
+        setIndex(index + 1);
+      }, 150); // speed control (ms)
+
+      return () => clearTimeout(timeout);
+    }
+  }, [index]);
 
   // Click outside to close
   useEffect(() => {
@@ -27,9 +41,9 @@ const WhatsAppWidget = () => {
           minute: "2-digit",
         });
         setTime(formatted);
- 
       }
-      return !prev;
+
+      return !prev; // toggle: open ↔ close
     });
   };
 
@@ -37,8 +51,8 @@ const WhatsAppWidget = () => {
     <div>
       {/* Floating Button */}
       <div
-        onClick={() =>handleToggle(!open)}
-        className="fixed bottom-5 right-5 bg-[#25D366] w-14 h-14 flex items-center justify-center rounded-full shadow-lg cursor-pointer z-50 sm:w-16 sm:h-16"
+        onClick={() => handleToggle(!open)}
+        className="fixed bottom-8 sm:bottom-5 sm:right-5 right-5 bg-[#25D366] w-14 h-14 flex items-center justify-center rounded-full shadow-lg cursor-pointer z-50 sm:w-16 sm:h-16"
       >
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
@@ -51,7 +65,7 @@ const WhatsAppWidget = () => {
       {open && (
         <div
           ref={openRef}
-          className="fixed bottom-20 right-0 w-70 md:w-80 bg-white rounded-xl shadow-xl z-50 overflow-hidden flex flex-col"
+          className="fixed bottom-25 right-4 w-70 md:w-80 bg-white rounded-xl shadow-xl z-50 overflow-hidden flex flex-col"
         >
           {/* Header */}
           <div className="bg-[#075E54] text-white p-3 flex items-center gap-3">
@@ -60,18 +74,20 @@ const WhatsAppWidget = () => {
               alt="profile"
               className="w-10 h-10 rounded-full"
             />
-            <div className="flex flex-col text-sm md:text-base"> 
+            <div className="flex flex-col text-sm md:text-base">
               <strong>Md Hasibur Rahman Shanto</strong>
-              <span className="text-xs sm:text-sm">SEO Expert & Consultant</span>
+              <span className="text-xs sm:text-sm">
+                SEO Expert & Consultant
+              </span>
             </div>
           </div>
 
           {/* Body */}
           <div className="p-3 text-sm text-gray-800 flex flex-col gap-1">
-            <p>
-              <strong>Hasibur</strong> <br />
-              Contact Hasibur Rahman Today!
-            </p>
+            <div>
+              <strong>Hasibur Rahman</strong>
+              <p>{displayText}</p>
+            </div>
             <small className="text-gray-500">{time}</small>
           </div>
 
