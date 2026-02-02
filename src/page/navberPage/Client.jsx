@@ -105,7 +105,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Client = () => {
-  
+
+  // };
 const settings = {
   dots: true,
   infinite: true,
