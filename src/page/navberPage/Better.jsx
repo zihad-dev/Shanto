@@ -48,14 +48,14 @@ const Better = ({
             <div className="w-full lg:w-[60%] space-y-10">
               {sections.map((section, index) => (
                 <div key={index}>
-                  <h1 className="text-3xl sm:text-4xl font-bold my-5 leading-snug">
+                  <h1 className="text-2xl md:text-4xl font-bold md:my-5 my-2 leading-snug">
                     {section.title}{" "}
                     <span className="text-red-500 cursor-pointer">
                       {section.highlight}
                     </span>{" "}
                     {section.titleEnd}
                   </h1>
-                  <p className="text-[#555] text-[16px] sm:text-[18px] leading-relaxed">
+                  <p className="text-[#555] text-[14px] md:text-[18px] leading-relaxed">
                     {section.description}
                   </p>
                 </div>

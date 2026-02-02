@@ -96,7 +96,7 @@
 // };
 
 // export default Client;
-
+"use client";
 import React from "react";
 import Slider from "react-slick";
 import Container from "../../component/Container";
@@ -105,17 +105,18 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Client = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 600,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2500,
-    arrows: false,
-    pauseOnHover: true,
-  };
+  
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 600,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2500,
+  arrows: false,
+  pauseOnHover: true,
+};
 
   const clients = [
     {
@@ -174,13 +175,13 @@ const Client = () => {
         <Slider {...settings}>
           {clients.map((client, index) => (
             <div key={index} className="px-3">
-              <div className="bg-white shadow-md rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300">
+              <div className="md:w-[400px] w-full bg-white shadow-md rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 m-auto">
                 {/* Profile */}
                 <div className="flex justify-center mb-4">
                   <img
                     src={client.img}
                     alt={client.name}
-                    className="w-[80px] h-[80px] rounded-full border-4 border-red-500 object-cover"
+                    className="w-[80px] h-[80px] h-[80px] rounded-full border-4 border-red-500 object-cover"
                   />
                 </div>
 

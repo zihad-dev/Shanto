@@ -146,7 +146,7 @@ const Rank = ({
 
         {/* Right Side - Form */}
         <div className="w-full lg:w-[50%] flex flex-col items-center text-center lg:text-left">
-          <h1 className="font-[Work Sans] font-semibold text-[26px] sm:text-[32px] lg:text-[36px] text-[#303030] leading-[40px] max-w-[600px] mb-6">
+          <h1 className="font-[Work Sans] font-semibold text-[20px] md:text-[32px] lg:text-[36px] text-[#303030] md:leading-[40px] leading-[20px] max-w-[600px] mb-6">
             {heading} <br />
             <span className="text-[#A53DFF]">{highlightText}</span>
           </h1>
@@ -208,7 +208,7 @@ const Rank = ({
               type="submit"
               className="mt-4 p-3 bg-[#A53DFF] rounded-[8px] text-white font-[Work Sans] font-semibold text-[16px] cursor-pointer hover:bg-[#9333EA] active:scale-95 transition-all duration-300"
             >
-              🚀 Find Out How
+               Find Out How
             </button>
           </form>
         </div>
