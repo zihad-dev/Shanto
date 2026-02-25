@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import Container from "../../component/Container";
 import Rank from "../../component/Rank";
@@ -8,8 +9,8 @@ import Client from "./Client";
 import Faq from "./Faq";
 import OptimizeWordPress from "./OptimizeWordPress";
 
-const WorldPress = () => {
-  const partners = [
+const Squarespase = () => {
+     const partners = [
     { name: "Google", image: "/assets/google.png" },
     { name: "Facebook", image: "/assets/facebook.png" },
     { name: "Amazon", image: "/assets/amazon.png" },
@@ -57,7 +58,8 @@ const WorldPress = () => {
   ];
 
   return (
-    <div className="mt-[150px]">
+   <>
+   <div className="mt-[100px]">
       <Container>
         <Rank
           heading="Rank Your WordPress Website on Google With Expert-Level SEO Guidance"
@@ -91,7 +93,8 @@ const WorldPress = () => {
         <Faq />
       </Container>
     </div>
-  );
-};
+   </>
+  )
+}
 
-export default WorldPress;
+export default Squarespase

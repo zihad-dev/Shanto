@@ -8,6 +8,8 @@ import Portfolio from './page/Portfolio';
 import Blog from './page/Blog';
 import WorldPress from './page/navberPage/WorldPress';
 import WIxSeo from './page/navberPage/WIxSeo';
+import Squarespase from './page/navberPage/Squarespase';
+import Joomla from './page/navberPage/Joomla';
 
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
             <Route path='/Blog' element={<Blog/>} />
             <Route path='/WordPress' element={<WorldPress/>} />
             <Route path='/WIxSeo' element={<WIxSeo/>} />
+            <Route path='/Squarespase' element={<Squarespase/>} />
+            <Route path='/joomla' element={<Joomla/>} />
           </Route>
         </Routes>
       

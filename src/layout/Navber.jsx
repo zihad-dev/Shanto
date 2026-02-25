@@ -1,5 +1,3 @@
-
-
 // import React, { useEffect, useRef, useState } from "react";
 // import { Link } from "react-router-dom";
 // import Container from "../component/Container";
@@ -72,7 +70,7 @@
 //               >
 //                 SEO Services
 //                 <FaAngleDown className={`transition-transform ${firstDrop ? "rotate-180" : "rotate-0"}`} />
-//           
+//
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Container from "../component/Container";
@@ -157,55 +155,166 @@ const Navber = () => {
               {firstDrop && (
                 <div className="absolute top-10 left-0 w-64 bg-[#F3F7FB] shadow-xl p-4 rounded-md md:z-50 ">
                   <ul className="flex flex-col gap-2">
-                    <li >
-                      <button onClick={() => { resetDesktop(); setCh1(!ch1); }} className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer">
+                    <li>
+                      <button
+                        onClick={() => {
+                          resetDesktop();
+                          setCh1(!ch1);
+                        }}
+                        className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer"
+                      >
                         CMS SEO
                       </button>
                       {ch1 && (
-                        <ul className="absolute top-0 left-56 w-48 bg-[#F3F7FB] shadow-md p-2 rounded md:z-50">
-                          <li><Link to="/wordpress" onClick={handleLinkClick}>WordPress SEO</Link></li>
-                          <li><Link to="/wixseo" onClick={handleLinkClick}>Wix SEO</Link></li>
-                          <li><Link to="/squarespace" onClick={handleLinkClick}>Squarespace SEO</Link></li>
-                          <li><Link to="/joomla" onClick={handleLinkClick}>Joomla SEO</Link></li>
+                        <ul className="absolute top-0 left-56 w-48 bg-[#F3F7FB] shadow-md p-4 rounded md:z-50 flex flex-col gap-2">
+                          <li className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer">
+                            <Link to="/wordpress" onClick={handleLinkClick}>
+                              WordPress SEO
+                            </Link>
+                          </li>
+                          <li className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer">
+                            <Link to="/wixseo" onClick={handleLinkClick}>
+                              Wix SEO
+                            </Link>
+                          </li>
+                          <li className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer">
+                            <Link to="/Squarespase" onClick={handleLinkClick}>
+                              Squarespace SEO
+                            </Link>
+                          </li>
+                          <li className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer">
+                            <Link to="/joomla" onClick={handleLinkClick}>
+                              Joomla SEO
+                            </Link>
+                          </li>
+                          <li className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer">
+                            <Link to="/joomla" onClick={handleLinkClick}>
+                              Magneto SEO
+                            </Link>
+                          </li>
+                          <li className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer">
+                            <Link to="/joomla" onClick={handleLinkClick}>
+                              Moon Fruit SEO
+                            </Link>
+                          </li>
+                          <li className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer">
+                            <Link to="/joomla" onClick={handleLinkClick}>
+                              Weebly SEO
+                            </Link>
+                          </li>
+                          <li className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer">
+                            <Link to="/joomla" onClick={handleLinkClick}>
+                              Webnode SEO
+                            </Link>
+                          </li>
                         </ul>
                       )}
                     </li>
 
                     <li>
-                      <button onClick={() => { resetDesktop(); setCh2(!ch2); }}  className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer">
+                      <button
+                        onClick={() => {
+                          resetDesktop();
+                          setCh2(!ch2);
+                        }}
+                        className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer"
+                      >
                         E-commerce SEO
                       </button>
                       {ch2 && (
-                        <ul className="absolute top-0 left-56 w-48 bg-[#F3F7FB] shadow-md p-2 rounded md:z-50">
-                          <li>Shopify SEO</li>
-                          <li>Etsy SEO</li>
-                          <li>Walmart SEO</li>
+                        <ul className="absolute top-0 left-56 w-[90%] bg-[#F3F7FB] shadow-md p-4 rounded md:z-50 flex flex-col gap-2">
+                          <li className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer">
+                            <Link to="/wordpress" onClick={handleLinkClick}>
+                              Shopify SEO
+                            </Link>
+                          </li>
+                          <li className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer">
+                            <Link to="/wixseo" onClick={handleLinkClick}>
+                              Etsy SEO
+                            </Link>
+                          </li>
+                          <li className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer">
+                            <Link to="/Squarespase" onClick={handleLinkClick}>
+                              Walmart SEO
+                            </Link>
+                          </li>
+                          <li className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer">
+                            <Link to="/joomla" onClick={handleLinkClick}>
+                              Big E-commerce SEO
+                            </Link>
+                          </li>
                         </ul>
                       )}
                     </li>
 
                     <li>
-                      <button onClick={() => { resetDesktop(); setCh3(!ch3); }}  className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer">
+                      <button
+                        onClick={() => {
+                          resetDesktop();
+                          setCh3(!ch3);
+                        }}
+                        className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer"
+                      >
                         Other SEO
                       </button>
                       {ch3 && (
-                        <ul className="absolute top-0 left-56 w-48 bg-[#F3F7FB] shadow-md p-2 rounded md:z-50">
-                          <li>Local SEO</li>
-                          <li>Link Building</li>
-                          <li>On Page SEO</li>
+                        <ul className="absolute top-0 left-56 w-[90%] bg-[#F3F7FB] shadow-md p-4 rounded md:z-50 flex flex-col gap-2">
+                          <li className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer">
+                            <Link to="/wordpress" onClick={handleLinkClick}>
+                              Link Building
+                            </Link>
+                          </li>
+                          <li className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer">
+                            <Link to="/wixseo" onClick={handleLinkClick}>
+                              On Page SEO
+                            </Link>
+                          </li>
+                          <li className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer">
+                            <Link to="/Squarespase" onClick={handleLinkClick}>
+                              International SEO
+                            </Link>
+                          </li>
+                          <li className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer">
+                            <Link to="/joomla" onClick={handleLinkClick}>
+                              Technical SEO
+                            </Link>
+                          </li>
                         </ul>
                       )}
                     </li>
 
                     <li>
-                      <button onClick={() => { resetDesktop(); setCh4(!ch4); }}  className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer">
+                      <button
+                        onClick={() => {
+                          resetDesktop();
+                          setCh4(!ch4);
+                        }}
+                        className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer"
+                      >
                         Generative SEO
-                      </button>
+                      </button> 
                       {ch4 && (
-                        <ul className="absolute top-0 left-56 w-48 bg-[#F3F7FB] shadow-md p-2 rounded md:z-50">
-                          <li>AEO</li>
-                          <li>GEO</li>
-                          <li>SXO</li>
+                        <ul className="absolute top-0 left-50 w-[100%] bg-[#F3F7FB] shadow-md p-4 rounded md:z-50 flex flex-col gap-2">
+                          <li className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer">
+                            <Link to="/wordpress" onClick={handleLinkClick}>
+                              AEO (Answer Engine Optimization)
+                            </Link>
+                          </li>
+                          <li className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer">
+                            <Link to="/wixseo" onClick={handleLinkClick}>
+                              GEO (Generative Engine Optimization)
+                            </Link>
+                          </li>
+                          <li className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer">
+                            <Link to="/Squarespase" onClick={handleLinkClick}>
+                              SXO (Search Experience Optimization)
+                            </Link>
+                          </li>
+                          <li className="w-full text-left px-2 py-1 hover:bg-white rounded cursor-pointer">
+                            <Link to="/joomla" onClick={handleLinkClick}>
+                               LLM (Large Language Models)
+                            </Link>
+                          </li>
                         </ul>
                       )}
                     </li>
@@ -214,9 +323,15 @@ const Navber = () => {
               )}
             </li>
 
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/portfolio">Portfolio</Link></li>
-            <li><Link to="/blog">Blog</Link></li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/portfolio">Portfolio</Link>
+            </li>
+            <li>
+              <Link to="/blog">Blog</Link>
+            </li>
             <li>
               <button className="bg-purple-600 text-white px-4 py-2 rounded">
                 Contact
@@ -250,21 +365,47 @@ const Navber = () => {
               {mFirst && (
                 <ul className="pl-4 mt-2 space-y-2">
                   <li>
-                    <button onClick={() => { resetMobile(); setM1(!m1); }}>
+                    <button
+                      onClick={() => {
+                        resetMobile();
+                        setM1(!m1);
+                      }}
+                    >
                       CMS SEO
                     </button>
                     {m1 && (
                       <ul className="pl-4 mt-1 space-y-1">
-                        <li><Link to="/wordpress" onClick={handleLinkClick}>WordPress SEO</Link></li>
-                        <li><Link to="/wixseo" onClick={handleLinkClick}>Wix SEO</Link></li>
-                        <li><Link to="/squarespace" onClick={handleLinkClick}>Squarespace SEO</Link></li>
-                        <li><Link to="/joomla" onClick={handleLinkClick}>Joomla SEO</Link></li>
+                        <li>
+                          <Link to="/wordpress" onClick={handleLinkClick}>
+                            WordPress SEO
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/wixseo" onClick={handleLinkClick}>
+                            Wix SEO
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/squarespace" onClick={handleLinkClick}>
+                            Squarespace SEO
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/joomla" onClick={handleLinkClick}>
+                            Joomla SEO
+                          </Link>
+                        </li>
                       </ul>
                     )}
                   </li>
 
                   <li>
-                    <button onClick={() => { resetMobile(); setM2(!m2); }}>
+                    <button
+                      onClick={() => {
+                        resetMobile();
+                        setM2(!m2);
+                      }}
+                    >
                       E-commerce SEO
                     </button>
                     {m2 && (
@@ -277,7 +418,12 @@ const Navber = () => {
                   </li>
 
                   <li>
-                    <button onClick={() => { resetMobile(); setM3(!m3); }}>
+                    <button
+                      onClick={() => {
+                        resetMobile();
+                        setM3(!m3);
+                      }}
+                    >
                       Other SEO
                     </button>
                     {m3 && (
@@ -290,7 +436,12 @@ const Navber = () => {
                   </li>
 
                   <li>
-                    <button onClick={() => { resetMobile(); setM4(!m4); }}>
+                    <button
+                      onClick={() => {
+                        resetMobile();
+                        setM4(!m4);
+                      }}
+                    >
                       Generative SEO
                     </button>
                     {m4 && (
@@ -305,9 +456,21 @@ const Navber = () => {
               )}
             </li>
 
-            <li><Link to="/about" onClick={handleLinkClick}>About</Link></li>
-            <li><Link to="/portfolio" onClick={handleLinkClick}>Portfolio</Link></li>
-            <li><Link to="/blog" onClick={handleLinkClick}>Blog</Link></li>
+            <li>
+              <Link to="/about" onClick={handleLinkClick}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/portfolio" onClick={handleLinkClick}>
+                Portfolio
+              </Link>
+            </li>
+            <li>
+              <Link to="/blog" onClick={handleLinkClick}>
+                Blog
+              </Link>
+            </li>
           </ul>
         </div>
       )}
@@ -316,7 +479,9 @@ const Navber = () => {
 };
 
 export default Navber;
- {/* Mobile Menu */}
+{
+  /* Mobile Menu */
+}
 //       {mobileMenu && (
 //         <div className="md:hidden bg-white shadow-lg w-full max-h-[90vh] overflow-y-auto">
 //           <ul className="flex flex-col gap-2 p-4">

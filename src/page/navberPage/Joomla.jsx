@@ -8,8 +8,8 @@ import Client from "./Client";
 import Faq from "./Faq";
 import OptimizeWordPress from "./OptimizeWordPress";
 
-const WorldPress = () => {
-  const partners = [
+const Joomla = () => {
+      const partners = [
     { name: "Google", image: "/assets/google.png" },
     { name: "Facebook", image: "/assets/facebook.png" },
     { name: "Amazon", image: "/assets/amazon.png" },
@@ -55,8 +55,8 @@ const WorldPress = () => {
       ],
     },
   ];
-
   return (
+    <>
     <div className="mt-[150px]">
       <Container>
         <Rank
@@ -91,7 +91,8 @@ const WorldPress = () => {
         <Faq />
       </Container>
     </div>
-  );
-};
+    </>
+  )
+}
 
-export default WorldPress;
+export default Joomla
